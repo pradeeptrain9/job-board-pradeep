@@ -33,6 +33,9 @@ h1{font:600 28px/1.15 var(--display);margin:0 0 4px;text-wrap:balance}
 .bar button{font:500 13px var(--body);padding:6px 12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;cursor:pointer}
 .bar button[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
 .bar .sep{opacity:.35;align-self:center;padding:0 2px}
+.tag{display:inline-block;margin-top:5px;font:600 11px var(--body);padding:2px 9px;border-radius:999px;border:1px solid var(--line)}
+.tag-ok{color:var(--accent);border-color:var(--accent);background:color-mix(in srgb,var(--accent),transparent 90%)}
+.tag-no{color:var(--muted)}
 .count{margin-left:auto;color:var(--muted);font-size:13px}
 button:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .list{display:flex;flex-direction:column;gap:10px;padding:0;margin:0;list-style:none}
@@ -146,8 +149,10 @@ pre{border-radius:14px;background:color-mix(in srgb,var(--bg),transparent 25%)}
 
 <script>
 const STATUSES=["New","Approved to apply","Applied","Skip"];
-let jobs=[],filter="All",cityFilter="All";const canWrite=true;let LS={};try{LS=JSON.parse(localStorage.getItem("st")||"{}")}catch{}
+let jobs=[],filter="All",cityFilter="All",attachOnly=false;const canWrite=true;let LS={};try{LS=JSON.parse(localStorage.getItem("st")||"{}")}catch{}
 const CITIES=["Hyderabad","Bengaluru","Remote"];
+// Attach-friendly = you can upload the tailored resume per application (Wellfound, LinkedIn, company ATS). Naukri/Indeed/Foundit quick-apply use your profile resume instead.
+const attachFriendly=j=>!/naukri|indeed|foundit|shine/i.test(j.source||"");
 const cityTags=j=>{const s=((j.location||"")+" "+(j.source||"")).toLowerCase();const t=new Set();if(/hyderabad|secunderabad/.test(s))t.add("Hyderabad");if(/bengaluru|bangalore/.test(s))t.add("Bengaluru");if(/remote|work from home|wfh|worldwide|anywhere/.test(s))t.add("Remote");return t};
 const $=s=>document.querySelector(s);
 const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
@@ -159,6 +164,9 @@ function renderBar(){
     const b=el("button",null,s);b.type="button";b.setAttribute("aria-pressed",String(s===filter));
     b.onclick=()=>{filter=s;render()};bar.append(b);
   });
+  const tog=el("button","city",attachOnly?"✓ Tailored-resume only":"Tailored-resume only");tog.type="button";tog.setAttribute("aria-pressed",String(attachOnly));
+  tog.title="Show only jobs where you can upload a tailored resume per application (Wellfound, LinkedIn, company sites). Hides Naukri profile-resume applies.";
+  tog.onclick=()=>{attachOnly=!attachOnly;render()};bar.append(tog);
   bar.append(el("span","sep","·"));
   [["All","All cities"],...CITIES.map(c=>[c,c])].forEach(([v,lbl])=>{
     const b=el("button","city",lbl);b.type="button";b.setAttribute("aria-pressed",String(v===cityFilter));
@@ -208,7 +216,7 @@ function resumeText(r){
 function render(){
   renderBar();
   const list=$("#list");list.textContent="";
-  const rows=jobs.filter(j=>(filter==="All"||(LS[j.id]||"New")===filter)&&(cityFilter==="All"||cityTags(j).has(cityFilter)))
+  const rows=jobs.filter(j=>(filter==="All"||(LS[j.id]||"New")===filter)&&(cityFilter==="All"||cityTags(j).has(cityFilter))&&(!attachOnly||attachFriendly(j)))
     .sort((a,b)=>(b.score-a.score)||String(b.found).localeCompare(String(a.found)));
   $("#count").textContent=rows.length+" of "+jobs.length+" jobs";
   if(!rows.length){
@@ -221,6 +229,7 @@ function render(){
     const main=el("div");const t=el("p","title",j.title);
     if(j.found===today)t.append(el("span","new","NEW"));
     main.append(t,el("p","meta",[j.company,j.location,"posted "+j.posted,j.source].filter(Boolean).join(" · ")));
+    const af=attachFriendly(j);main.append(el("span","tag "+(af?"tag-ok":"tag-no"),af?"✓ Attach tailored resume":"Naukri profile resume"));
     const side=el("div","side");
     const a=el("a","apply","Open posting ↗");a.href=j.url;a.target="_blank";a.rel="noopener noreferrer";
     const sel=el("select");sel.setAttribute("aria-label","Status for "+j.title);
