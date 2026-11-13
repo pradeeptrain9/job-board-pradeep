@@ -1,0 +1,334 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pradeep's AI Jobs</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+/* Layout: sticky filter bar over a ranked list of job rows; a row expands to show fit, gaps and the tailored resume. */
+:root{
+  --bg:#f5edda; --surface:#fffdf5; --fg:#43392a; --muted:#8a7a5e; --line:#e7dabb;
+  --accent:#5f8a46; --accent-fg:#fffdf5;
+  --good:#3f7d4e; --good-bg:#dff0da; --warn:#9a6a1b; --warn-bg:#fbeccb; --bad:#a6462f; --bad-bg:#f7ddd2; --info-bg:#dceaf3;
+  --sky-top:#aed9ee; --sky-bot:#f3ecd6; --sun:#f6d77a; --hill-far:#bcd99b; --hill-near:#8fc07a; --cloud:#fffdf8;
+  --shadow:0 6px 20px rgba(120,96,54,.14); --shadow-sm:0 2px 8px rgba(120,96,54,.10); --radius:16px;
+  --display:"Fraunces",Georgia,serif; --body:"Nunito",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1b2333; --surface:#263147; --fg:#efe6d2; --muted:#b2a788; --line:#3a475f;
+  --accent:#9ac47a; --accent-fg:#1b2333;
+  --good:#8fd39f; --good-bg:#203a2a; --warn:#e8c06a; --warn-bg:#3e3114; --bad:#e8a48c; --bad-bg:#45271f; --info-bg:#25364f;
+  --sky-top:#2a3a57; --sky-bot:#1b2333; --sun:#e8c06a; --hill-far:#3f5a48; --hill-near:#557a53; --cloud:#cdd8e6;
+  --shadow:0 6px 22px rgba(0,0,0,.38); --shadow-sm:0 2px 10px rgba(0,0,0,.30); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1b2333; --surface:#263147; --fg:#efe6d2; --muted:#b2a788; --line:#3a475f;
+  --accent:#9ac47a; --accent-fg:#1b2333;
+  --good:#8fd39f; --good-bg:#203a2a; --warn:#e8c06a; --warn-bg:#3e3114; --bad:#e8a48c; --bad-bg:#45271f; --info-bg:#25364f;
+  --sky-top:#2a3a57; --sky-bot:#1b2333; --sun:#e8c06a; --hill-far:#3f5a48; --hill-near:#557a53; --cloud:#cdd8e6;
+  --shadow:0 6px 22px rgba(0,0,0,.38); --shadow-sm:0 2px 10px rgba(0,0,0,.30); color-scheme:dark}
+body{background:linear-gradient(var(--sky-top),var(--sky-bot) 42%,var(--bg) 42%) fixed,var(--bg);color:var(--fg);font:16px/1.6 var(--body);
+  padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:980px;margin:0 auto}
+h1{font:600 28px/1.15 var(--display);margin:0 0 4px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 20px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.bar button{font:500 13px var(--body);padding:6px 12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;cursor:pointer}
+.bar button[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.count{margin-left:auto;color:var(--muted);font-size:13px}
+button:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.list{display:flex;flex-direction:column;gap:10px;padding:0;margin:0;list-style:none}
+.job{background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.row{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:14px;padding:14px;align-items:start}
+.score{font:500 20px var(--mono);text-align:center;border-radius:6px;padding:8px 0;font-variant-numeric:tabular-nums}
+.s-hi{background:var(--good-bg);color:var(--good)} .s-mid{background:var(--info-bg);color:var(--accent)} .s-lo{background:var(--warn-bg);color:var(--warn)}
+.title{font-weight:600;margin:0}
+.meta{color:var(--muted);font-size:13px;margin:2px 0 0}
+.new{font:500 11px var(--mono);background:var(--accent);color:var(--accent-fg);padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:1px}
+.side{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+select{font:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg)}
+.apply{font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.apply:hover{text-decoration:underline}
+details{border-top:1px solid var(--line);padding:0 14px}
+summary{cursor:pointer;padding:10px 0;font-size:13px;color:var(--muted)}
+.det{display:grid;gap:12px;padding:0 0 14px}
+.det h3{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 2px}
+.det p{margin:0}
+.gap{color:var(--bad)}
+pre{white-space:pre-wrap;font:13px/1.5 var(--body);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px;margin:0;overflow-wrap:anywhere}
+.copy{font:500 13px var(--body);padding:6px 12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:6px;cursor:pointer;justify-self:start}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.st-Applied{opacity:.75}.st-Skip{opacity:.5}
+.prof{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:16px;display:grid;gap:10px}
+.prof h2{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.prof .f{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.prof label{display:grid;gap:3px;font-size:12px;color:var(--muted);min-width:0}
+.prof input{font:inherit;font-size:14px;padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);min-width:0}
+.prof .r{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.empty{padding:32px 16px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:8px}
+@media(max-width:560px){.row{grid-template-columns:48px minmax(0,1fr)}.side{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center}}
+
+/* ---- Ghibli layer: painterly sky, soft hills, warm rounded cards ---- */
+.hero{position:relative;height:150px;margin:-8px 0 18px;border-radius:22px;overflow:hidden;
+  background:linear-gradient(var(--sky-top),color-mix(in srgb,var(--sky-top),var(--sky-bot) 60%));box-shadow:var(--shadow-sm)}
+.hero .sun{position:absolute;top:26px;right:38px;width:64px;height:64px;border-radius:50%;
+  background:radial-gradient(circle at 50% 45%,var(--sun),color-mix(in srgb,var(--sun),transparent 20%));
+  box-shadow:0 0 42px 14px color-mix(in srgb,var(--sun),transparent 55%)}
+.hero .hill{position:absolute;left:-5%;right:-5%;border-radius:50%/60px}
+.hero .hill.far{bottom:-70px;height:130px;background:var(--hill-far);opacity:.9}
+.hero .hill.near{bottom:-86px;height:120px;background:var(--hill-near);left:30%;right:-15%}
+.hero .hill.near2{bottom:-92px;height:110px;background:color-mix(in srgb,var(--hill-near),#000 8%);left:-20%;right:45%}
+.hero .cloud{position:absolute;height:20px;background:var(--cloud);border-radius:999px;opacity:.92;
+  box-shadow:0 0 0 0 var(--cloud);animation:drift 26s linear infinite}
+.hero .cloud::before,.hero .cloud::after{content:"";position:absolute;bottom:0;background:var(--cloud);border-radius:50%}
+.hero .cloud::before{width:26px;height:26px;left:12px;bottom:2px}.hero .cloud::after{width:20px;height:20px;right:14px;bottom:3px}
+.hero .c1{top:34px;left:12%;width:64px;animation-duration:30s}
+.hero .c2{top:62px;left:44%;width:48px;opacity:.8;animation-duration:38s;animation-delay:-8s}
+.hero .c3{top:20px;left:70%;width:40px;opacity:.7;animation-duration:34s;animation-delay:-16s}
+@keyframes drift{from{transform:translateX(-60px)}to{transform:translateX(120px)}}
+@media(prefers-reduced-motion:reduce){.hero .cloud{animation:none}}
+
+h1{font-weight:700;letter-spacing:-.01em}
+.prof,.job{border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+.prof{background:var(--surface);border-color:color-mix(in srgb,var(--line),transparent 20%)}
+.job{transition:transform .14s ease,box-shadow .14s ease}
+.job:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.bar button,.copy,select,.prof input,#t-jd{border-radius:999px;transition:background .14s,border-color .14s,transform .1s}
+.prof input,#t-jd{border-radius:14px}
+.bar button:hover,.copy:hover{border-color:var(--accent);background:color-mix(in srgb,var(--accent),transparent 88%)}
+.copy{font-weight:700}
+.copy:active,.bar button:active{transform:translateY(1px)}
+.score{border-radius:14px;font-weight:600;box-shadow:inset 0 0 0 1px color-mix(in srgb,currentColor,transparent 80%)}
+.apply{font-weight:700}
+.new{border-radius:999px;background:var(--accent)}
+/* Tailor panel: friendlier, clearer */
+#tailor{background:
+  radial-gradient(120px 120px at 92% -10%,color-mix(in srgb,var(--sun),transparent 78%),transparent),
+  var(--surface)}
+#tailor h2::before{content:"🌿 ";filter:saturate(.8)}
+#tailor button[type=submit]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent);padding:9px 18px;font-size:14px}
+#tailor button[type=submit]:hover{background:color-mix(in srgb,var(--accent),#000 8%)}
+#t-out:not(:empty){margin-top:6px;padding-top:12px;border-top:1px dashed var(--line)}
+#t-out .score{min-width:56px;padding:10px 0}
+pre{border-radius:14px;background:color-mix(in srgb,var(--bg),transparent 25%)}
+</style></head><body>
+
+<div class="wrap">
+  <div class="hero" aria-hidden="true">
+    <div class="sun"></div>
+    <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+    <div class="hill near2"></div><div class="hill far"></div><div class="hill near"></div>
+  </div>
+  <h1>Pradeep's AI Job Garden</h1>
+  <p class="sub">AI-engineer roles, hand-picked and scored against the resume every morning. Tailor a resume to any job below, then apply through each posting link. Your statuses stay in this browser.</p>
+  <form class="prof" id="prof">
+    <h2>Your contact details (added to every tailored resume)</h2>
+    <div class="f">
+      <label>Mobile<input id="p-phone" type="tel" autocomplete="tel" placeholder="+91 …"></label>
+      <label>Email<input id="p-email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+      <label>LinkedIn<input id="p-li" type="text" placeholder="linkedin.com/in/your-id"></label>
+    </div>
+    <div class="r"><button class="copy" type="submit">Save details</button><span class="meta" id="p-msg">Stays in this browser only; never uploaded.</span></div>
+  </form>
+  <form class="prof" id="tailor">
+    <h2>Tailor a resume to any job</h2>
+    <div class="f">
+      <label>Job link<input id="t-url" type="url" placeholder="https://… (paste the posting URL)"></label>
+    </div>
+    <label style="font-size:12px;color:var(--muted);display:grid;gap:3px">Or paste the job description text (used if the link can't be fetched)
+      <textarea id="t-jd" rows="4" style="font:inherit;font-size:13px;padding:8px 9px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);resize:vertical"></textarea></label>
+    <div class="r"><button class="copy" type="submit">Generate tailored resume</button><span class="meta" id="t-msg">Runs in your browser with a built-in engine; nothing is uploaded.</span></div>
+    <div id="t-out" class="det"></div>
+  </form>
+  <div class="bar" id="bar" role="group" aria-label="Filter by status"></div>
+  <ul class="list" id="list"></ul>
+</div>
+
+<script>
+const STATUSES=["New","Approved to apply","Applied","Skip"];
+let jobs=[],filter="All";const canWrite=true;let LS={};try{LS=JSON.parse(localStorage.getItem("st")||"{}")}catch{}
+const $=s=>document.querySelector(s);
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+const today=new Date().toISOString().slice(0,10);
+
+function renderBar(){
+  const bar=$("#bar");bar.textContent="";
+  ["All",...STATUSES].forEach(s=>{
+    const b=el("button",null,s);b.type="button";b.setAttribute("aria-pressed",String(s===filter));
+    b.onclick=()=>{filter=s;render()};bar.append(b);
+  });
+  const c=el("span","count",jobs.length+" jobs");c.id="count";bar.append(c);
+}
+const PH="PHONE | EMAIL | LINKEDIN | GITHUB (fill in before sending)";
+const D={"skills": [{"label": "Languages", "items": ["Python", "C++", "Java", "JavaScript", "TypeScript", "SQL", "Dart"]}, {"label": "LLM/AI", "items": ["OpenAI/Anthropic APIs", "LangChain", "LangGraph", "Agent Skills & Agentic Workflows", "Prompt Engineering", "RAG", "JSON Schema", "Pydantic"]}, {"label": "Frameworks", "items": ["FastAPI", "Spring Boot", "ReactJS", "Flutter", "Kubernetes"]}, {"label": "Tools", "items": ["Azure Databricks", "Azure Functions", "Helm", "Postman", "Git", "OracleDB"]}, {"label": "DevOps/Testing", "items": ["CI/CD (Azure DevOps)", "Docker", "Pytest", "JUnit", "Test Case Generation"]}], "experience": [{"company": "Technumen", "location": "", "role": "AI Engineer", "dates": "Jul 2026 – Present", "bullets": ["Agentic Projects for Google: Worked on several agentic AI projects with Google as the client.", "Skills and Agents for Google Workspace: Built skills and agents that write and test test cases for Google Workspace."]}, {"company": "Shimento", "location": "Hyderabad, India", "role": "Fullstack AI Engineer", "dates": "Nov 2025 – Jun 2026", "bullets": ["Agentic AI Systems: Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.", "VS Code Extension: Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.", "Backend AI Services: Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.", "LLM Integrations: Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.", "System Design: Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability."]}, {"company": "UBS", "location": "Pune, India", "role": "Software Engineer", "dates": "Aug 2023 – Nov 2025", "bullets": ["LLM-Powered Code Analyzer: Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.", "Multi-Agent Workflows: Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.", "Context + Code Understanding: Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.", "RAG Pipelines: Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.", "Backend Integrations: Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.", "Optimization: Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30%.", "Deployment CI/CD: Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps."]}], "projects": [{"name": "Ariadne: On-Call Agent with Graph Memory", "sub": "Graph Hacks (FalkorDB) · Personal Project", "dates": "Oct 2026", "bullets": ["Agent Design: Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.", "Measured Memory: Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests."]}, {"name": "AgriN: Digital Agriculture Advisory Network", "sub": "Personal Project", "dates": "2026", "bullets": ["Deterministic Engine: FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.", "Pipeline and ML: Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app."]}, {"name": "Jal Panchayat: Village Water Safety Verdicts", "sub": "Code for a Billion · Personal Project", "dates": "2026", "bullets": ["Fail-Closed Engine: Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.", "Safe Narration: Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31%."]}, {"name": "RoadLedger: Road Defect Measurement", "sub": "OpenCV AI Competition 2026 · Personal Project", "dates": "2026", "bullets": ["Measured Evidence: OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.", "Live Capture: Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders."]}], "education": [{"line": "Army Institute of Technology", "location": "Pune, India", "sub": "B.E. in Computer Science and Engineering; CGPA: 8.87 / 10", "dates": "Aug 2019 – Jun 2023"}], "certifications": [["PL-300", "Power BI Data Analyst Associate"], ["AI-900", "Azure AI Fundamentals"], ["AZ-900", "Azure Fundamentals"], ["DP-900", "Azure Data Fundamentals"]]};
+const BASE={name:"PRADEEP KONDA",title:"AI ENGINEER",github:"github.com/pradeeptrain9",projects:D.projects,education:D.education,certifications:D.certifications};
+let profile={phone:"",email:"",linkedin:""};
+const contact=()=>[profile.email,profile.phone,"Github: "+BASE.github,profile.linkedin&&"LinkedIn: "+profile.linkedin].filter(Boolean).join(" | ");
+const texEsc=t=>t.replace(/\\/g,"/").replace(/[&%$#_{}]/g,m=>"\\"+m).replace(/~/g,"\\~{}").replace(/\^/g,"\\^{}").replace(/[·]/g,"|").replace(/–/g,"--");
+const latexFor=j=>profile.phone||profile.email||profile.linkedin?j.latex.replace(PH,texEsc(contact())):j.latex;
+const skillLines=sk=>sk.map(g=>g.label+": "+g.items.join(", "));
+const lead=b=>{const m=b.match(/^([^:]{3,40}): (.*)$/);return m?[m[1],m[2]]:["",b]};
+async function savePdf(j,btn,fname){
+  const J=window.jspdf&&window.jspdf.jsPDF;if(!J){btn.textContent="PDF library blocked";return}
+  try{
+    const doc=new J({unit:"pt",format:"a4"}),W=doc.internal.pageSize.getWidth(),H=doc.internal.pageSize.getHeight(),M=44,mw=W-2*M;let y=M;
+    const need=h=>{if(y+h>H-M){doc.addPage();y=M}};
+    const line=(t,{size=9.5,bold=false,italic=false,align="left",gap=2,x=M,w=mw,color=0}={})=>{
+      doc.setFont("helvetica",bold&&italic?"bolditalic":bold?"bold":italic?"italic":"normal");doc.setFontSize(size);doc.setTextColor(color);
+      doc.splitTextToSize(t,w).forEach(l=>{need(size*1.25);y+=size;doc.text(l,align==="center"?W/2:x,y,{align});y+=size*.25});y+=gap};
+    const rt=(a,b,{bold=true,italic=false}={})=>{need(14);doc.setFont("helvetica",bold?"bold":italic?"italic":"normal");doc.setFontSize(10);doc.setTextColor(0);y+=10;doc.text(a,M,y);doc.setFont("helvetica",bold?"normal":"italic");doc.text(b||"",W-M,y,{align:"right"});y+=3};
+    const head=t=>{need(30);y+=5;line(t.toUpperCase(),{size:10.5,bold:true,gap:1,color:40});doc.setDrawColor(150);doc.line(M,y,W-M,y);y+=4};
+    const bul=b=>{const [k,t]=lead(b);need(13);const y0=y;line("•",{x:M+2,w:10,gap:0});y=y0;line((k?k+": ":"")+t,{x:M+14,w:mw-14,gap:1.5})};
+    const r=j.resume;
+    line(BASE.name,{size:20,bold:true,gap:0});line(BASE.title,{size:10,italic:true,gap:0,color:80});line(contact(),{size:8.5,gap:3});
+    if(r.summary){head("Summary");line(r.summary)}
+    head("Skills Summary");skillLines(r.skills).forEach(l=>line(l,{gap:1.5}));
+    head("Experience");r.experience.forEach(e=>{need(34);rt(e.company,e.location||"");rt(e.role,e.dates,{bold:false,italic:true});e.bullets.forEach(bul)});
+    head("Projects");(r.projects||BASE.projects).forEach(p=>{need(34);rt(p.name,p.dates);line(p.sub,{italic:true,gap:1});p.bullets.forEach(bul)});
+    head("Education");BASE.education.forEach(e=>{rt(e.line,e.location);rt(e.sub,e.dates,{bold:false,italic:true})});
+    head("Certifications");BASE.certifications.forEach(c=>bul(c[0]+": "+c[1]));
+    doc.save(fname);btn.textContent="Saved";
+  }catch(e){btn.textContent="PDF failed"}
+}
+function resumeText(r){
+  if(!r)return"";
+  const out=[BASE.name,contact(),""];if(r.summary)out.push(r.summary,"");
+  out.push("SKILLS",...skillLines(r.skills),"","EXPERIENCE");
+  r.experience.forEach(e=>{out.push("",e.company+" | "+e.dates,e.role);e.bullets.forEach(b=>out.push("• "+b))});
+  out.push("","PROJECTS");(r.projects||BASE.projects).forEach(p=>{out.push("",p.name+" | "+p.dates);p.bullets.forEach(b=>out.push("• "+b))});
+  return out.join("\n");
+}
+function render(){
+  renderBar();
+  const list=$("#list");list.textContent="";
+  const rows=jobs.filter(j=>filter==="All"||(LS[j.id]||"New")===filter)
+    .sort((a,b)=>(b.score-a.score)||String(b.found).localeCompare(String(a.found)));
+  $("#count").textContent=rows.length+" of "+jobs.length+" jobs";
+  if(!rows.length){
+    list.append(el("li","empty",jobs.length?"No jobs with this status.":"No jobs yet. The first daily run fills this list."));return;
+  }
+  rows.forEach(j=>{
+    const st=LS[j.id]||"New",li=el("li","job st-"+st.split(" ")[0]);
+    const row=el("div","row");
+    row.append(el("div","score "+(j.score>=75?"s-hi":j.score>=70?"s-mid":"s-lo"),j.score));
+    const main=el("div");const t=el("p","title",j.title);
+    if(j.found===today)t.append(el("span","new","NEW"));
+    main.append(t,el("p","meta",[j.company,j.location,"posted "+j.posted,j.source].filter(Boolean).join(" · ")));
+    const side=el("div","side");
+    const a=el("a","apply","Open posting ↗");a.href=j.url;a.target="_blank";a.rel="noopener noreferrer";
+    const sel=el("select");sel.setAttribute("aria-label","Status for "+j.title);
+    STATUSES.forEach(s=>{const o=el("option",null,s);o.value=s;if(s===st)o.selected=true;sel.append(o)});
+    sel.disabled=!canWrite;
+    sel.onchange=()=>{LS[j.id]=sel.value;try{localStorage.setItem("st",JSON.stringify(LS))}catch{}render()};
+    // Opening the posting or downloading the tailored resume counts as applying — mark it, in place.
+    const applyNow=()=>{if((LS[j.id]||"New")==="Applied")return;LS[j.id]="Applied";try{localStorage.setItem("st",JSON.stringify(LS))}catch{}sel.value="Applied";li.className="job st-Applied"};
+    a.addEventListener("click",applyNow);
+    side.append(a,sel);row.append(main,side);li.append(row);
+    const d=el("details");d.append(el("summary",null,"Fit, gaps"+(j.resume?" and tailored resume":"")));
+    const det=el("div","det");
+    const blk=(h,p,c)=>{const w=el("div");w.append(el("h3",null,h),el("p",c,p));return w};
+    det.append(blk("Why it matches",j.matched||j.summary||""),blk("Gaps",j.gaps||"None noted","gap"));
+    if(j.summary&&j.matched)det.prepend(blk("The role",j.summary));
+    if(j.resume){
+      const txt=resumeText(j.resume),w=el("div");const fbase=(j.company+"-"+j.title).replace(/[^A-Za-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60)+"-Pradeep-Konda";w.append(el("h3",null,"Tailored resume text"));
+      const pre=el("pre",null,txt);const cp=el("button","copy","Copy text");cp.type="button";
+      cp.onclick=async()=>{try{await navigator.clipboard.writeText(txt);cp.textContent="Copied"}catch{const r=document.createRange();r.selectNodeContents(pre);const s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent="Selected, press copy"}};
+      w.append(pre);det.append(w,cp);
+      const pdf=el("button","copy","Download PDF");pdf.type="button";pdf.onclick=()=>{savePdf(j,pdf,fbase+".pdf");applyNow()};det.append(pdf);
+      if(j.latex){
+        const row2=el("div","btns");
+        const fname=(j.company+"-"+j.title).replace(/[^A-Za-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60)+"-Pradeep-Konda.tex";
+        const dl=el("button","copy","Download LaTeX (.tex)");dl.type="button";
+        dl.onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([latexFor(j)],{type:"text/plain"}));a.download=fname;a.click();dl.textContent="Saved";applyNow()};
+        const cl=el("button","copy","Copy LaTeX");cl.type="button";
+        cl.onclick=async()=>{try{await navigator.clipboard.writeText(latexFor(j));cl.textContent="Copied"}catch{cl.textContent="Copy blocked"}};
+        row2.append(dl,cl);det.append(row2,el("p","meta","Paste into Overleaf or compile with pdflatex. Contact line comes from the details saved above."));
+      }
+    }
+    d.append(det);li.append(d);list.append(li);
+  });
+}
+const F=["phone","email","li"].map(k=>$("#p-"+k));
+const fill=()=>{F[0].value=profile.phone;F[1].value=profile.email;F[2].value=profile.linkedin};
+try{profile={...profile,...JSON.parse(localStorage.getItem("profile")||"{}")};fill()}catch{}
+let profDoc=null;
+$("#prof").onsubmit=async e=>{
+  e.preventDefault();profile={phone:F[0].value.trim(),email:F[1].value.trim(),linkedin:F[2].value.trim()};
+  try{localStorage.setItem("profile",JSON.stringify(profile))}catch{}
+  $("#p-msg").textContent="Saved in this browser. Resumes now use these details.";render();
+};
+// ---- Tailor-to-any-job (deterministic, in-browser) ----
+const RESUME={summary:"AI Engineer with 3 years building LLM-powered agentic systems in Python: LangChain and LangGraph agents, FastAPI services and JSON-schema-validated outputs, plus agents and skills that write and test test cases for Google Workspace.",skills:D.skills,experience:D.experience,projects:D.projects};
+const SUMS={
+  agent:"AI Engineer with 3 years building agentic systems: LangChain and LangGraph workflows with tool orchestration and validation, FastAPI services and JSON-schema-validated LLM outputs, plus agents and skills that write and test test cases for Google Workspace.",
+  llm:"AI Engineer with 3 years shipping LLM applications in Python: GPT-4 and OpenAI/Anthropic APIs, RAG prototypes, deterministic Pydantic JSON contracts and FastAPI services, deployed with Docker, Helm and Azure DevOps.",
+  backend:"Software and AI Engineer with 3 years building Python (FastAPI) and Java (Spring Boot) backends for financial systems and LLM services, with caching and async processing that cut latency by 30%, deployed on Azure Kubernetes Service.",
+  fullstack:"Fullstack AI Engineer with 3 years connecting TypeScript editor extensions to Python agent backends, with robust error handling and observability.",
+  testing:"AI Engineer building agents and skills that write and test test cases for Google Workspace, with Pytest and JUnit experience and 3 years in Python and Java backends and LLM pipelines."
+};
+const ALIAS={"OpenAI/Anthropic APIs":["openai","anthropic","gpt","claude","llm"],"LangChain":["langchain"],"LangGraph":["langgraph"],"Agent Skills & Agentic Workflows":["agent","agentic","skills","mcp","tool calling"],"Prompt Engineering":["prompt"],"RAG":["rag","retrieval","embedding","vector"],"JSON Schema":["json schema","structured output"],"Pydantic":["pydantic"],"FastAPI":["fastapi","rest api","backend"],"Spring Boot":["spring"],"ReactJS":["react","frontend"],"Flutter":["flutter","mobile"],"Kubernetes":["kubernetes","k8s","aks"],"Azure Databricks":["databricks","spark"],"Azure Functions":["azure","serverless"],"Helm":["helm"],"Git":["git"],"OracleDB":["oracle"],"CI/CD (Azure DevOps)":["ci/cd","devops","pipeline","azure devops"],"Docker":["docker","container"],"Pytest":["pytest","testing","test automation"],"JUnit":["junit"],"Test Case Generation":["test case","testing","qa","test automation"],"Python":["python"],"Java":["java"],"JavaScript":["javascript"],"TypeScript":["typescript"],"C++":["c++"],"SQL":["sql"],"Dart":["dart"],"Postman":["postman","api testing"],"Azure Databricks ":["databricks"]};
+function itemScore(t,it){return (ALIAS[it]||[it.toLowerCase()]).reduce((n,k)=>{let i=0,c=0;while((i=t.indexOf(k,i))>=0){c++;i+=k.length}return n+c},0)}
+function tailor(jd){
+  const t=(jd||"").toLowerCase(),has=(...k)=>k.some(x=>t.includes(x));
+  let summary=SUMS.llm;
+  if(has("agent","agentic","langgraph","multi-agent","mcp"))summary=SUMS.agent;
+  else if(has("test case","qa engineer","sdet","test automation","quality"))summary=SUMS.testing;
+  else if(has("full stack","fullstack","full-stack","react","frontend"))summary=SUMS.fullstack;
+  else if(has("backend","spring","microservice","java developer"))summary=SUMS.backend;
+  const skills=RESUME.skills.map((g,gi)=>{const items=g.items.map((it,i)=>({it,sc:itemScore(t,it),i})).sort((a,b)=>b.sc-a.sc||a.i-b.i);return {g:{label:g.label,items:items.map(x=>x.it)},sc:items.reduce((n,x)=>n+x.sc,0),gi}}).sort((a,b)=>b.sc-a.sc||a.gi-b.gi).map(x=>x.g);
+  return {summary,skills,experience:RESUME.experience,projects:RESUME.projects};
+}
+function buildLatex(r){
+  const e=texEsc,bl=b=>{const [k,x]=lead(b);return "\\item "+(k?"\\textbf{"+e(k)+":} ":"")+e(x)};
+  const L=["\\documentclass[10pt]{article}","\\usepackage[utf8]{inputenc}","\\usepackage[margin=0.6in]{geometry}","\\usepackage[hidelinks]{hyperref}","\\usepackage{enumitem,titlesec}","\\pagestyle{empty}",
+    "\\titleformat{\\section}{\\large\\scshape}{}{0em}{}[\\titlerule]","\\titlespacing*{\\section}{0pt}{6pt}{3pt}","\\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt}","\\begin{document}",
+    "\\noindent{\\LARGE\\bfseries "+e(BASE.name.replace("PRADEEP KONDA","Pradeep Konda"))+"}\\\\ \\textit{AI Engineer}\\\\ {\\small "+e(contact()||PH)+"}"];
+  if(r.summary)L.push("\\section*{Summary}",e(r.summary));
+  L.push("\\section*{Skills Summary}","\\begin{itemize}",...r.skills.map(g=>"\\item \\textbf{"+e(g.label)+":} "+e(g.items.join(", "))),"\\end{itemize}","\\section*{Experience}");
+  r.experience.forEach(x=>L.push("\\noindent\\textbf{"+e(x.company)+"}\\hfill "+e(x.location||"")+"\\\\","\\textit{"+e(x.role)+"}\\hfill "+e(x.dates),"\\begin{itemize}",...x.bullets.map(bl),"\\end{itemize}"));
+  L.push("\\section*{Projects}");(r.projects||BASE.projects).forEach(x=>L.push("\\noindent\\textbf{"+e(x.name)+"}\\hfill "+e(x.dates)+"\\\\","\\textit{"+e(x.sub)+"}","\\begin{itemize}",...x.bullets.map(bl),"\\end{itemize}"));
+  L.push("\\section*{Education}");BASE.education.forEach(x=>L.push("\\noindent\\textbf{"+e(x.line)+"}\\hfill "+e(x.location)+"\\\\","\\textit{"+e(x.sub)+"}\\hfill "+e(x.dates)));
+  L.push("\\section*{Certifications}","\\begin{itemize}",...BASE.certifications.map(c=>"\\item \\textbf{"+e(c[0])+":} "+e(c[1])),"\\end{itemize}","\\end{document}");
+  return L.join("\n");
+}
+function scoreDet(jd){
+  const t=jd.toLowerCase(),has=(...k)=>k.some(x=>t.includes(x));let s=35;
+  if(has("ai engineer","ml engineer","machine learning engineer","llm","genai","generative ai","agentic","applied ai","ai developer","ai/ml"))s+=20;
+  else if(has("software engineer","backend engineer","python developer","fullstack","full stack"))s+=10;
+  let hits=0;Object.keys(ALIAS).forEach(k=>{if(itemScore(t,k)>0)hits++});s+=Math.min(30,hits*3);
+  const m=t.match(/(\d+)\+?\s*(?:years|yrs)/);if(m){const y=+m[1];if(y>6)s-=15;else if(y<=5)s+=5}
+  if(has("remote","bengaluru","bangalore","hyderabad","pune"))s+=7;
+  return {score:Math.max(0,Math.min(100,s)),matched:"Title, skills and domain overlap with the posting (built-in scorer).",gaps:"Estimate only — a rough keyword score, not a judgment of fit."};
+}
+const TAILOR_API="";
+function normSkills(l){return RESUME.skills}
+async function backendTailor(){throw new Error("backend disabled")}
+$("#tailor").onsubmit=async e=>{
+  e.preventDefault();
+  const url=$("#t-url").value.trim(),msg=$("#t-msg"),out=$("#t-out");let jd=$("#t-jd").value.trim();
+  if(url&&!jd){msg.textContent="Fetching job page…";try{const r=await fetch("https://r.jina.ai/"+url);jd=(await r.text()).trim();if(jd.length<120)throw 0;}catch{msg.textContent="Couldn't fetch that link (bot-blocked or offline). Paste the job description text below and generate again.";return;}}
+  if(!jd){msg.textContent="Add a job link or paste the job description text.";return;}
+  let data,note;
+  if(TAILOR_API){msg.textContent="Tailoring with AI…";try{data=await backendTailor(jd,i=>{msg.textContent="Tailoring with AI… "+Math.round((i+1)*1.5)+"s";});}catch(err){note="AI backend unavailable ("+err.message+") — used the built-in engine.";}}
+  if(!data){data={...tailor(jd),...scoreDet(jd),engine:"built-in"};}
+  const title=((jd.split("\n").find(l=>l.trim())||"Target role").trim()).slice(0,70);
+  const j={title,company:"",resume:{summary:data.summary,skills:data.skills,experience:data.experience,projects:data.projects}};j.latex=buildLatex(j.resume);
+  const fbase=(title+"-Pradeep-Konda").replace(/[^A-Za-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,70);
+  out.textContent="";
+  const head=el("div","row");head.style.padding="0 0 10px";
+  head.append(el("div","score "+(data.score>=75?"s-hi":data.score>=60?"s-mid":"s-lo"),data.score));
+  const hmain=el("div");hmain.append(el("p","title","Match score · "+title),el("p","meta",(data.engine&&data.engine!=="built-in"?"Tailored by "+data.engine:"Tailored by built-in engine")+(note?" — "+note:"")));
+  head.append(hmain);out.append(head);
+  const blk=(h,p,c)=>{const wb=el("div");wb.append(el("h3",null,h),el("p",c,p));return wb};
+  if(data.matched)out.append(blk("Why it matches",data.matched));
+  if(data.gaps)out.append(blk("Gaps",data.gaps,"gap"));
+  const txt=resumeText(j.resume),w=el("div");w.append(el("h3",null,"Tailored resume"));
+  const pre=el("pre",null,txt);w.append(pre);out.append(w);
+  const btns=el("div","btns");
+  const cp=el("button","copy","Copy text");cp.type="button";cp.onclick=async()=>{try{await navigator.clipboard.writeText(txt);cp.textContent="Copied"}catch{cp.textContent="Copy blocked"}};
+  const pdf=el("button","copy","Download PDF");pdf.type="button";pdf.onclick=()=>savePdf(j,pdf,fbase+".pdf");
+  const dl=el("button","copy","Download LaTeX (.tex)");dl.type="button";dl.onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([latexFor(j)],{type:"text/plain"}));a.download=fbase+".tex";a.click();dl.textContent="Saved"};
+  btns.append(cp,pdf,dl);out.append(btns);
+  out.append(el("p","meta","Facts are unchanged from your resume — review before sending. Contact line comes from the box above."));
+  msg.textContent="Done. Download below.";
+};
+render();
+fetch("jobs.json").then(r=>r.json()).then(d=>{jobs=d;render()}).catch(()=>$("#list").replaceChildren(el("li","empty","Could not load jobs.")));
+</script></body></html>
