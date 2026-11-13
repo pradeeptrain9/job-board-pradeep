@@ -44,6 +44,8 @@ button:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{
 .new{font:500 11px var(--mono);background:var(--accent);color:var(--accent-fg);padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:1px}
 .side{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
 select{font:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg)}
+.apply-btn{font:600 13px var(--body);padding:6px 14px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-fg);border-radius:999px;cursor:pointer}
+.apply-btn:hover{background:color-mix(in srgb,var(--accent),#000 8%)}
 .apply{font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
 .apply:hover{text-decoration:underline}
 details{border-top:1px solid var(--line);padding:0 14px}
@@ -117,7 +119,7 @@ pre{border-radius:14px;background:color-mix(in srgb,var(--bg),transparent 25%)}
     <div class="hill near2"></div><div class="hill far"></div><div class="hill near"></div>
   </div>
   <h1>Pradeep's AI Job Garden</h1>
-  <p class="sub">AI-engineer roles, hand-picked and scored against the resume every morning. Tailor a resume to any job below, then apply through each posting link. Your statuses stay in this browser.</p>
+  <p class="sub">AI-engineer roles, hand-picked and scored against the resume every morning. Hit <b>Apply</b> on any row to grab its tailored resume and open the posting in one click — you review and submit on the site; nothing is submitted for you. Your statuses stay in this browser.</p>
   <form class="prof" id="prof">
     <h2>Your contact details (added to every tailored resume)</h2>
     <div class="f">
@@ -220,7 +222,11 @@ function render(){
     // Opening the posting or downloading the tailored resume counts as applying — mark it, in place.
     const applyNow=()=>{if((LS[j.id]||"New")==="Applied")return;LS[j.id]="Applied";try{localStorage.setItem("st",JSON.stringify(LS))}catch{}sel.value="Applied";li.className="job st-Applied"};
     a.addEventListener("click",applyNow);
-    side.append(a,sel);row.append(main,side);li.append(row);
+    // Apply: one click readies the application — downloads the tailored PDF and opens the posting. You review and submit on the site; it is never auto-submitted.
+    const ap=el("button","apply-btn",j.resume?"Apply (resume + open)":"Apply (open)");ap.type="button";
+    ap.title="Downloads your tailored resume (if any) and opens the posting in a new tab. You review and click submit on the site — nothing is submitted for you.";
+    ap.onclick=()=>{if(j.resume){const fb=(j.company+"-"+j.title).replace(/[^A-Za-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60)+"-Pradeep-Konda";savePdf(j,ap,fb+".pdf")}window.open(j.url,"_blank","noopener");applyNow()};
+    side.append(ap,a,sel);row.append(main,side);li.append(row);
     const d=el("details");d.append(el("summary",null,"Fit, gaps"+(j.resume?" and tailored resume":"")));
     const det=el("div","det");
     const blk=(h,p,c)=>{const w=el("div");w.append(el("h3",null,h),el("p",c,p));return w};
