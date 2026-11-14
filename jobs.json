@@ -4678,5 +4678,1253 @@
     }
    ]
   }
+ },
+ {
+  "title": "Sr Software Engineer - Agentic Applications (Full Stack)",
+  "company": "Databricks",
+  "location": "Bengaluru, India",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8679982002",
+  "source": "Databricks (career site)",
+  "posted": "Greenhouse updated 2026-11-14 (0d)",
+  "score": 84,
+  "matched": "Direct hit: agentic + full-stack AI at a top data/AI product company. Pradeep ships agent workflows with LangChain/LangGraph, FastAPI backends and a TypeScript VS Code extension (Shimento), plus Azure Databricks exposure — matches agentic apps, full-stack and the data/AI platform. Bengaluru = full location; attach-friendly (company ATS).",
+  "gaps": "\"Sr\" band likely targets 5+ yrs; Pradeep ~3 yrs (flag as stretch). Pay not shown — Databricks Blr typically well above 35 LPA for strong AI eng, so high hike potential (estimate only).",
+  "summary": "Full-stack, agentic-AI engineering at Databricks: build agent-driven applications across a TypeScript/React frontend and Python services on a data+AI platform.",
+  "id": "databricks-sr-software-engineer-agentic-",
+  "found": "2026-11-14",
+  "latex": "\\documentclass[10pt]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[margin=0.6in]{geometry}\n\\usepackage[hidelinks]{hyperref}\n\\usepackage{enumitem,titlesec}\n\\pagestyle{empty}\n\\titleformat{\\section}{\\large\\scshape}{}{0em}{}[\\titlerule]\n\\titlespacing*{\\section}{0pt}{6pt}{3pt}\n\\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt}\n\\begin{document}\n\\noindent{\\LARGE\\bfseries Pradeep Konda}\\\\ \\textit{AI Engineer}\\\\ {\\small PHONE | EMAIL | LINKEDIN | GITHUB (fill in before sending)}\n\\section*{Summary}\nAI engineer (\\~{}3 yrs) who builds agentic, full-stack applications end to end --- LangChain/LangGraph agent workflows, FastAPI services with deterministic Pydantic/JSON-schema contracts, and a TypeScript VS Code extension --- with Azure Databricks and Kubernetes deployment experience.\n\\section*{Skills Summary}\n\\begin{itemize}\n\\item \\textbf{LLM/AI:} Agent Skills \\& Agentic Workflows, LangGraph, LangChain, OpenAI/Anthropic APIs, Gemini, RAG, Prompt Engineering, JSON Schema, Pydantic\n\\item \\textbf{Languages:} Python, TypeScript, JavaScript, Java, C++, SQL, Dart\n\\item \\textbf{Frameworks:} FastAPI, ReactJS, Spring Boot, Kubernetes, Flutter\n\\item \\textbf{Tools:} Azure Databricks, Azure Functions, Helm, Git, Postman, OracleDB\n\\item \\textbf{DevOps/Testing:} CI/CD (Azure DevOps), Docker, Pytest, JUnit, Test Case Generation\n\\end{itemize}\n\\section*{Experience}\n\\noindent\\textbf{Technumen}\\hfill \\\\\n\\textit{AI Engineer}\\hfill Jul 2026 -- Present\n\\begin{itemize}\n\\item \\textbf{Google Internal Tools:} Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.\n\\item \\textbf{Agent Skills:} Developed several AI agent skills that update test cases and test them as they run.\n\\item \\textbf{Test Case Agents:} Built agents that write and test test cases for Google Workspace.\n\\end{itemize}\n\\noindent\\textbf{Shimento}\\hfill Hyderabad, India\\\\\n\\textit{Fullstack AI Engineer}\\hfill Nov 2025 -- Jun 2026\n\\begin{itemize}\n\\item \\textbf{Agentic AI Systems:} Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.\n\\item \\textbf{VS Code Extension:} Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.\n\\item \\textbf{Backend AI Services:} Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.\n\\item \\textbf{LLM Integrations:} Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.\n\\item \\textbf{System Design:} Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability.\n\\end{itemize}\n\\noindent\\textbf{UBS}\\hfill Pune, India\\\\\n\\textit{Software Engineer}\\hfill Aug 2023 -- Nov 2025\n\\begin{itemize}\n\\item \\textbf{LLM-Powered Code Analyzer:} Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.\n\\item \\textbf{Multi-Agent Workflows:} Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.\n\\item \\textbf{Context + Code Understanding:} Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.\n\\item \\textbf{RAG Pipelines:} Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.\n\\item \\textbf{Backend Integrations:} Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.\n\\item \\textbf{Optimization:} Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30\\%.\n\\item \\textbf{Deployment CI/CD:} Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps.\n\\end{itemize}\n\\section*{Projects}\n\\noindent\\textbf{Ariadne: On-Call Agent with Graph Memory}\\hfill Oct 2026\\\\\n\\textit{Graph Hacks (FalkorDB) | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Agent Design:} Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.\n\\item \\textbf{Measured Memory:} Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests.\n\\end{itemize}\n\\noindent\\textbf{AgriN: Digital Agriculture Advisory Network}\\hfill 2026\\\\\n\\textit{Personal Project}\n\\begin{itemize}\n\\item \\textbf{Deterministic Engine:} FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.\n\\item \\textbf{Pipeline and ML:} Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app.\n\\end{itemize}\n\\noindent\\textbf{Jal Panchayat: Village Water Safety Verdicts}\\hfill 2026\\\\\n\\textit{Code for a Billion | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Fail-Closed Engine:} Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.\n\\item \\textbf{Safe Narration:} Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31\\%.\n\\end{itemize}\n\\noindent\\textbf{RoadLedger: Road Defect Measurement}\\hfill 2026\\\\\n\\textit{OpenCV AI Competition 2026 | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Measured Evidence:} OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.\n\\item \\textbf{Live Capture:} Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders.\n\\end{itemize}\n\\section*{Education}\n\\noindent\\textbf{Army Institute of Technology}\\hfill Pune, India\\\\\n\\textit{B.E. in Computer Science and Engineering; CGPA: 8.87 / 10}\\hfill Aug 2019 -- Jun 2023\n\\section*{Certifications}\n\\begin{itemize}\n\\item \\textbf{PL-300:} Power BI Data Analyst Associate\n\\item \\textbf{AI-900:} Azure AI Fundamentals\n\\item \\textbf{AZ-900:} Azure Fundamentals\n\\item \\textbf{DP-900:} Azure Data Fundamentals\n\\end{itemize}\n\\end{document}",
+  "resume": {
+   "summary": "AI engineer (~3 yrs) who builds agentic, full-stack applications end to end — LangChain/LangGraph agent workflows, FastAPI services with deterministic Pydantic/JSON-schema contracts, and a TypeScript VS Code extension — with Azure Databricks and Kubernetes deployment experience.",
+   "skills": [
+    {
+     "label": "LLM/AI",
+     "items": [
+      "Agent Skills & Agentic Workflows",
+      "LangGraph",
+      "LangChain",
+      "OpenAI/Anthropic APIs",
+      "Gemini",
+      "RAG",
+      "Prompt Engineering",
+      "JSON Schema",
+      "Pydantic"
+     ]
+    },
+    {
+     "label": "Languages",
+     "items": [
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "Java",
+      "C++",
+      "SQL",
+      "Dart"
+     ]
+    },
+    {
+     "label": "Frameworks",
+     "items": [
+      "FastAPI",
+      "ReactJS",
+      "Spring Boot",
+      "Kubernetes",
+      "Flutter"
+     ]
+    },
+    {
+     "label": "Tools",
+     "items": [
+      "Azure Databricks",
+      "Azure Functions",
+      "Helm",
+      "Git",
+      "Postman",
+      "OracleDB"
+     ]
+    },
+    {
+     "label": "DevOps/Testing",
+     "items": [
+      "CI/CD (Azure DevOps)",
+      "Docker",
+      "Pytest",
+      "JUnit",
+      "Test Case Generation"
+     ]
+    }
+   ],
+   "experience": [
+    {
+     "company": "Technumen",
+     "location": "",
+     "role": "AI Engineer",
+     "dates": "Jul 2026 – Present",
+     "bullets": [
+      "Google Internal Tools: Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.",
+      "Agent Skills: Developed several AI agent skills that update test cases and test them as they run.",
+      "Test Case Agents: Built agents that write and test test cases for Google Workspace."
+     ]
+    },
+    {
+     "company": "Shimento",
+     "location": "Hyderabad, India",
+     "role": "Fullstack AI Engineer",
+     "dates": "Nov 2025 – Jun 2026",
+     "bullets": [
+      "Agentic AI Systems: Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.",
+      "VS Code Extension: Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.",
+      "Backend AI Services: Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.",
+      "LLM Integrations: Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.",
+      "System Design: Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability."
+     ]
+    },
+    {
+     "company": "UBS",
+     "location": "Pune, India",
+     "role": "Software Engineer",
+     "dates": "Aug 2023 – Nov 2025",
+     "bullets": [
+      "LLM-Powered Code Analyzer: Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.",
+      "Multi-Agent Workflows: Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.",
+      "Context + Code Understanding: Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.",
+      "RAG Pipelines: Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.",
+      "Backend Integrations: Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.",
+      "Optimization: Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30%.",
+      "Deployment CI/CD: Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Ariadne: On-Call Agent with Graph Memory",
+     "sub": "Graph Hacks (FalkorDB) · Personal Project",
+     "dates": "Oct 2026",
+     "bullets": [
+      "Agent Design: Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.",
+      "Measured Memory: Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests."
+     ]
+    },
+    {
+     "name": "AgriN: Digital Agriculture Advisory Network",
+     "sub": "Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Deterministic Engine: FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.",
+      "Pipeline and ML: Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app."
+     ]
+    },
+    {
+     "name": "Jal Panchayat: Village Water Safety Verdicts",
+     "sub": "Code for a Billion · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Fail-Closed Engine: Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.",
+      "Safe Narration: Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31%."
+     ]
+    },
+    {
+     "name": "RoadLedger: Road Defect Measurement",
+     "sub": "OpenCV AI Competition 2026 · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Measured Evidence: OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.",
+      "Live Capture: Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders."
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "title": "Agentic AI Engineer",
+  "company": "Elastic",
+  "location": "Bangalore, India",
+  "url": "https://jobs.elastic.co/jobs?gh_jid=8247206",
+  "source": "Elastic (career site)",
+  "posted": "Greenhouse updated 2026-11-11 (3d)",
+  "score": 84,
+  "matched": "Title is an exact match. Elastic is a search/data product company; agentic AI + retrieval maps directly to Pradeep's LangGraph agents and RAG work. Bangalore full location; remote-friendly; attach-friendly ATS.",
+  "gaps": "Pay not shown (product company, estimate strong hike). May want production-scale search/vector experience; Pradeep's RAG is prototype-scale (flag).",
+  "summary": "Agentic AI engineering at Elastic: design agent workflows and retrieval-grounded AI on a search/data platform.",
+  "id": "elastic-agentic-ai-engineer",
+  "found": "2026-11-14",
+  "latex": "\\documentclass[10pt]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[margin=0.6in]{geometry}\n\\usepackage[hidelinks]{hyperref}\n\\usepackage{enumitem,titlesec}\n\\pagestyle{empty}\n\\titleformat{\\section}{\\large\\scshape}{}{0em}{}[\\titlerule]\n\\titlespacing*{\\section}{0pt}{6pt}{3pt}\n\\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt}\n\\begin{document}\n\\noindent{\\LARGE\\bfseries Pradeep Konda}\\\\ \\textit{AI Engineer}\\\\ {\\small PHONE | EMAIL | LINKEDIN | GITHUB (fill in before sending)}\n\\section*{Summary}\nAgentic AI engineer (\\~{}3 yrs) specializing in LangChain/LangGraph agent workflows, RAG with embeddings for knowledge grounding, and reliable LLM I/O via Pydantic/JSON-schema contracts behind FastAPI services.\n\\section*{Skills Summary}\n\\begin{itemize}\n\\item \\textbf{LLM/AI:} Agent Skills \\& Agentic Workflows, LangGraph, LangChain, RAG, OpenAI/Anthropic APIs, Gemini, Prompt Engineering, JSON Schema, Pydantic\n\\item \\textbf{Languages:} Python, TypeScript, Java, JavaScript, C++, SQL, Dart\n\\item \\textbf{Frameworks:} FastAPI, ReactJS, Spring Boot, Kubernetes, Flutter\n\\item \\textbf{DevOps/Testing:} CI/CD (Azure DevOps), Docker, Pytest, JUnit, Test Case Generation\n\\item \\textbf{Tools:} Azure Databricks, Azure Functions, Helm, Git, Postman, OracleDB\n\\end{itemize}\n\\section*{Experience}\n\\noindent\\textbf{Technumen}\\hfill \\\\\n\\textit{AI Engineer}\\hfill Jul 2026 -- Present\n\\begin{itemize}\n\\item \\textbf{Google Internal Tools:} Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.\n\\item \\textbf{Agent Skills:} Developed several AI agent skills that update test cases and test them as they run.\n\\item \\textbf{Test Case Agents:} Built agents that write and test test cases for Google Workspace.\n\\end{itemize}\n\\noindent\\textbf{Shimento}\\hfill Hyderabad, India\\\\\n\\textit{Fullstack AI Engineer}\\hfill Nov 2025 -- Jun 2026\n\\begin{itemize}\n\\item \\textbf{Agentic AI Systems:} Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.\n\\item \\textbf{VS Code Extension:} Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.\n\\item \\textbf{Backend AI Services:} Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.\n\\item \\textbf{LLM Integrations:} Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.\n\\item \\textbf{System Design:} Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability.\n\\end{itemize}\n\\noindent\\textbf{UBS}\\hfill Pune, India\\\\\n\\textit{Software Engineer}\\hfill Aug 2023 -- Nov 2025\n\\begin{itemize}\n\\item \\textbf{LLM-Powered Code Analyzer:} Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.\n\\item \\textbf{Multi-Agent Workflows:} Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.\n\\item \\textbf{Context + Code Understanding:} Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.\n\\item \\textbf{RAG Pipelines:} Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.\n\\item \\textbf{Backend Integrations:} Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.\n\\item \\textbf{Optimization:} Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30\\%.\n\\item \\textbf{Deployment CI/CD:} Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps.\n\\end{itemize}\n\\section*{Projects}\n\\noindent\\textbf{Ariadne: On-Call Agent with Graph Memory}\\hfill Oct 2026\\\\\n\\textit{Graph Hacks (FalkorDB) | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Agent Design:} Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.\n\\item \\textbf{Measured Memory:} Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests.\n\\end{itemize}\n\\noindent\\textbf{AgriN: Digital Agriculture Advisory Network}\\hfill 2026\\\\\n\\textit{Personal Project}\n\\begin{itemize}\n\\item \\textbf{Deterministic Engine:} FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.\n\\item \\textbf{Pipeline and ML:} Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app.\n\\end{itemize}\n\\noindent\\textbf{Jal Panchayat: Village Water Safety Verdicts}\\hfill 2026\\\\\n\\textit{Code for a Billion | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Fail-Closed Engine:} Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.\n\\item \\textbf{Safe Narration:} Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31\\%.\n\\end{itemize}\n\\noindent\\textbf{RoadLedger: Road Defect Measurement}\\hfill 2026\\\\\n\\textit{OpenCV AI Competition 2026 | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Measured Evidence:} OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.\n\\item \\textbf{Live Capture:} Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders.\n\\end{itemize}\n\\section*{Education}\n\\noindent\\textbf{Army Institute of Technology}\\hfill Pune, India\\\\\n\\textit{B.E. in Computer Science and Engineering; CGPA: 8.87 / 10}\\hfill Aug 2019 -- Jun 2023\n\\section*{Certifications}\n\\begin{itemize}\n\\item \\textbf{PL-300:} Power BI Data Analyst Associate\n\\item \\textbf{AI-900:} Azure AI Fundamentals\n\\item \\textbf{AZ-900:} Azure Fundamentals\n\\item \\textbf{DP-900:} Azure Data Fundamentals\n\\end{itemize}\n\\end{document}",
+  "resume": {
+   "summary": "Agentic AI engineer (~3 yrs) specializing in LangChain/LangGraph agent workflows, RAG with embeddings for knowledge grounding, and reliable LLM I/O via Pydantic/JSON-schema contracts behind FastAPI services.",
+   "skills": [
+    {
+     "label": "LLM/AI",
+     "items": [
+      "Agent Skills & Agentic Workflows",
+      "LangGraph",
+      "LangChain",
+      "RAG",
+      "OpenAI/Anthropic APIs",
+      "Gemini",
+      "Prompt Engineering",
+      "JSON Schema",
+      "Pydantic"
+     ]
+    },
+    {
+     "label": "Languages",
+     "items": [
+      "Python",
+      "TypeScript",
+      "Java",
+      "JavaScript",
+      "C++",
+      "SQL",
+      "Dart"
+     ]
+    },
+    {
+     "label": "Frameworks",
+     "items": [
+      "FastAPI",
+      "ReactJS",
+      "Spring Boot",
+      "Kubernetes",
+      "Flutter"
+     ]
+    },
+    {
+     "label": "DevOps/Testing",
+     "items": [
+      "CI/CD (Azure DevOps)",
+      "Docker",
+      "Pytest",
+      "JUnit",
+      "Test Case Generation"
+     ]
+    },
+    {
+     "label": "Tools",
+     "items": [
+      "Azure Databricks",
+      "Azure Functions",
+      "Helm",
+      "Git",
+      "Postman",
+      "OracleDB"
+     ]
+    }
+   ],
+   "experience": [
+    {
+     "company": "Technumen",
+     "location": "",
+     "role": "AI Engineer",
+     "dates": "Jul 2026 – Present",
+     "bullets": [
+      "Google Internal Tools: Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.",
+      "Agent Skills: Developed several AI agent skills that update test cases and test them as they run.",
+      "Test Case Agents: Built agents that write and test test cases for Google Workspace."
+     ]
+    },
+    {
+     "company": "Shimento",
+     "location": "Hyderabad, India",
+     "role": "Fullstack AI Engineer",
+     "dates": "Nov 2025 – Jun 2026",
+     "bullets": [
+      "Agentic AI Systems: Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.",
+      "VS Code Extension: Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.",
+      "Backend AI Services: Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.",
+      "LLM Integrations: Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.",
+      "System Design: Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability."
+     ]
+    },
+    {
+     "company": "UBS",
+     "location": "Pune, India",
+     "role": "Software Engineer",
+     "dates": "Aug 2023 – Nov 2025",
+     "bullets": [
+      "LLM-Powered Code Analyzer: Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.",
+      "Multi-Agent Workflows: Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.",
+      "Context + Code Understanding: Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.",
+      "RAG Pipelines: Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.",
+      "Backend Integrations: Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.",
+      "Optimization: Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30%.",
+      "Deployment CI/CD: Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Ariadne: On-Call Agent with Graph Memory",
+     "sub": "Graph Hacks (FalkorDB) · Personal Project",
+     "dates": "Oct 2026",
+     "bullets": [
+      "Agent Design: Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.",
+      "Measured Memory: Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests."
+     ]
+    },
+    {
+     "name": "AgriN: Digital Agriculture Advisory Network",
+     "sub": "Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Deterministic Engine: FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.",
+      "Pipeline and ML: Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app."
+     ]
+    },
+    {
+     "name": "Jal Panchayat: Village Water Safety Verdicts",
+     "sub": "Code for a Billion · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Fail-Closed Engine: Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.",
+      "Safe Narration: Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31%."
+     ]
+    },
+    {
+     "name": "RoadLedger: Road Defect Measurement",
+     "sub": "OpenCV AI Competition 2026 · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Measured Evidence: OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.",
+      "Live Capture: Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders."
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "title": "AI Engineer, AI FDE (Evergreen)",
+  "company": "Databricks",
+  "location": "Bengaluru, India",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8878946002",
+  "source": "Databricks (career site)",
+  "posted": "Greenhouse updated 2026-11-14 (0d); evergreen pipeline",
+  "score": 83,
+  "matched": "AI Engineer + Forward Deployed Engineer — exactly Pradeep's target titles. Client-facing agentic/LLM build-and-deploy work maps to his Google-client agentic projects (Technumen) and LLM code-analysis tooling (UBS/Shimento). Bengaluru; attach-friendly company ATS.",
+  "gaps": "Evergreen = always-open talent pipeline, not a single dated req (flag). FDE is client-facing deployment engineering (fits; not pure sales). Pay not shown (estimate: strong hike over 22 LPA).",
+  "summary": "Forward-deployed AI engineering at Databricks: build and deploy agentic/LLM solutions with customers on the data+AI platform.",
+  "id": "databricks-ai-engineer-ai-fde-evergreen",
+  "found": "2026-11-14",
+  "latex": "\\documentclass[10pt]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[margin=0.6in]{geometry}\n\\usepackage[hidelinks]{hyperref}\n\\usepackage{enumitem,titlesec}\n\\pagestyle{empty}\n\\titleformat{\\section}{\\large\\scshape}{}{0em}{}[\\titlerule]\n\\titlespacing*{\\section}{0pt}{6pt}{3pt}\n\\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt}\n\\begin{document}\n\\noindent{\\LARGE\\bfseries Pradeep Konda}\\\\ \\textit{AI Engineer}\\\\ {\\small PHONE | EMAIL | LINKEDIN | GITHUB (fill in before sending)}\n\\section*{Summary}\nAI / forward-deployed engineer (\\~{}3 yrs) who builds and ships agentic and LLM systems with clients --- Google-client agentic projects, an LLM code analyzer (GPT-4 + FastAPI + Pydantic), and RAG pipelines --- deployed via Docker/Kubernetes on Azure.\n\\section*{Skills Summary}\n\\begin{itemize}\n\\item \\textbf{LLM/AI:} Agent Skills \\& Agentic Workflows, LangGraph, LangChain, OpenAI/Anthropic APIs, Gemini, RAG, Prompt Engineering, JSON Schema, Pydantic\n\\item \\textbf{Languages:} Python, TypeScript, Java, JavaScript, C++, SQL, Dart\n\\item \\textbf{Frameworks:} FastAPI, Spring Boot, ReactJS, Kubernetes, Flutter\n\\item \\textbf{Tools:} Azure Databricks, Azure Functions, Helm, Git, Postman, OracleDB\n\\item \\textbf{DevOps/Testing:} CI/CD (Azure DevOps), Docker, Pytest, JUnit, Test Case Generation\n\\end{itemize}\n\\section*{Experience}\n\\noindent\\textbf{Technumen}\\hfill \\\\\n\\textit{AI Engineer}\\hfill Jul 2026 -- Present\n\\begin{itemize}\n\\item \\textbf{Google Internal Tools:} Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.\n\\item \\textbf{Agent Skills:} Developed several AI agent skills that update test cases and test them as they run.\n\\item \\textbf{Test Case Agents:} Built agents that write and test test cases for Google Workspace.\n\\end{itemize}\n\\noindent\\textbf{Shimento}\\hfill Hyderabad, India\\\\\n\\textit{Fullstack AI Engineer}\\hfill Nov 2025 -- Jun 2026\n\\begin{itemize}\n\\item \\textbf{Agentic AI Systems:} Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.\n\\item \\textbf{VS Code Extension:} Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.\n\\item \\textbf{Backend AI Services:} Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.\n\\item \\textbf{LLM Integrations:} Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.\n\\item \\textbf{System Design:} Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability.\n\\end{itemize}\n\\noindent\\textbf{UBS}\\hfill Pune, India\\\\\n\\textit{Software Engineer}\\hfill Aug 2023 -- Nov 2025\n\\begin{itemize}\n\\item \\textbf{LLM-Powered Code Analyzer:} Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.\n\\item \\textbf{Multi-Agent Workflows:} Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.\n\\item \\textbf{Context + Code Understanding:} Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.\n\\item \\textbf{RAG Pipelines:} Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.\n\\item \\textbf{Backend Integrations:} Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.\n\\item \\textbf{Optimization:} Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30\\%.\n\\item \\textbf{Deployment CI/CD:} Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps.\n\\end{itemize}\n\\section*{Projects}\n\\noindent\\textbf{Ariadne: On-Call Agent with Graph Memory}\\hfill Oct 2026\\\\\n\\textit{Graph Hacks (FalkorDB) | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Agent Design:} Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.\n\\item \\textbf{Measured Memory:} Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests.\n\\end{itemize}\n\\noindent\\textbf{AgriN: Digital Agriculture Advisory Network}\\hfill 2026\\\\\n\\textit{Personal Project}\n\\begin{itemize}\n\\item \\textbf{Deterministic Engine:} FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.\n\\item \\textbf{Pipeline and ML:} Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app.\n\\end{itemize}\n\\noindent\\textbf{Jal Panchayat: Village Water Safety Verdicts}\\hfill 2026\\\\\n\\textit{Code for a Billion | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Fail-Closed Engine:} Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.\n\\item \\textbf{Safe Narration:} Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31\\%.\n\\end{itemize}\n\\noindent\\textbf{RoadLedger: Road Defect Measurement}\\hfill 2026\\\\\n\\textit{OpenCV AI Competition 2026 | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Measured Evidence:} OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.\n\\item \\textbf{Live Capture:} Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders.\n\\end{itemize}\n\\section*{Education}\n\\noindent\\textbf{Army Institute of Technology}\\hfill Pune, India\\\\\n\\textit{B.E. in Computer Science and Engineering; CGPA: 8.87 / 10}\\hfill Aug 2019 -- Jun 2023\n\\section*{Certifications}\n\\begin{itemize}\n\\item \\textbf{PL-300:} Power BI Data Analyst Associate\n\\item \\textbf{AI-900:} Azure AI Fundamentals\n\\item \\textbf{AZ-900:} Azure Fundamentals\n\\item \\textbf{DP-900:} Azure Data Fundamentals\n\\end{itemize}\n\\end{document}",
+  "resume": {
+   "summary": "AI / forward-deployed engineer (~3 yrs) who builds and ships agentic and LLM systems with clients — Google-client agentic projects, an LLM code analyzer (GPT-4 + FastAPI + Pydantic), and RAG pipelines — deployed via Docker/Kubernetes on Azure.",
+   "skills": [
+    {
+     "label": "LLM/AI",
+     "items": [
+      "Agent Skills & Agentic Workflows",
+      "LangGraph",
+      "LangChain",
+      "OpenAI/Anthropic APIs",
+      "Gemini",
+      "RAG",
+      "Prompt Engineering",
+      "JSON Schema",
+      "Pydantic"
+     ]
+    },
+    {
+     "label": "Languages",
+     "items": [
+      "Python",
+      "TypeScript",
+      "Java",
+      "JavaScript",
+      "C++",
+      "SQL",
+      "Dart"
+     ]
+    },
+    {
+     "label": "Frameworks",
+     "items": [
+      "FastAPI",
+      "Spring Boot",
+      "ReactJS",
+      "Kubernetes",
+      "Flutter"
+     ]
+    },
+    {
+     "label": "Tools",
+     "items": [
+      "Azure Databricks",
+      "Azure Functions",
+      "Helm",
+      "Git",
+      "Postman",
+      "OracleDB"
+     ]
+    },
+    {
+     "label": "DevOps/Testing",
+     "items": [
+      "CI/CD (Azure DevOps)",
+      "Docker",
+      "Pytest",
+      "JUnit",
+      "Test Case Generation"
+     ]
+    }
+   ],
+   "experience": [
+    {
+     "company": "Technumen",
+     "location": "",
+     "role": "AI Engineer",
+     "dates": "Jul 2026 – Present",
+     "bullets": [
+      "Google Internal Tools: Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.",
+      "Agent Skills: Developed several AI agent skills that update test cases and test them as they run.",
+      "Test Case Agents: Built agents that write and test test cases for Google Workspace."
+     ]
+    },
+    {
+     "company": "Shimento",
+     "location": "Hyderabad, India",
+     "role": "Fullstack AI Engineer",
+     "dates": "Nov 2025 – Jun 2026",
+     "bullets": [
+      "Agentic AI Systems: Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.",
+      "VS Code Extension: Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.",
+      "Backend AI Services: Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.",
+      "LLM Integrations: Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.",
+      "System Design: Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability."
+     ]
+    },
+    {
+     "company": "UBS",
+     "location": "Pune, India",
+     "role": "Software Engineer",
+     "dates": "Aug 2023 – Nov 2025",
+     "bullets": [
+      "LLM-Powered Code Analyzer: Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.",
+      "Multi-Agent Workflows: Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.",
+      "Context + Code Understanding: Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.",
+      "RAG Pipelines: Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.",
+      "Backend Integrations: Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.",
+      "Optimization: Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30%.",
+      "Deployment CI/CD: Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Ariadne: On-Call Agent with Graph Memory",
+     "sub": "Graph Hacks (FalkorDB) · Personal Project",
+     "dates": "Oct 2026",
+     "bullets": [
+      "Agent Design: Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.",
+      "Measured Memory: Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests."
+     ]
+    },
+    {
+     "name": "AgriN: Digital Agriculture Advisory Network",
+     "sub": "Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Deterministic Engine: FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.",
+      "Pipeline and ML: Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app."
+     ]
+    },
+    {
+     "name": "Jal Panchayat: Village Water Safety Verdicts",
+     "sub": "Code for a Billion · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Fail-Closed Engine: Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.",
+      "Safe Narration: Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31%."
+     ]
+    },
+    {
+     "name": "RoadLedger: Road Defect Measurement",
+     "sub": "OpenCV AI Competition 2026 · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Measured Evidence: OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.",
+      "Live Capture: Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders."
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "title": "Sr. Software Engineer - Databricks AI",
+  "company": "Databricks",
+  "location": "Bengaluru, India",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8924868002",
+  "source": "Databricks (career site)",
+  "posted": "Greenhouse updated 2026-11-14 (0d)",
+  "score": 77,
+  "matched": "Core AI product engineering at Databricks; Python + LLM + platform work fits Pradeep's FastAPI/LLM backend and Azure Databricks exposure. Bengaluru; attach-friendly.",
+  "gaps": "\"Sr\" band likely 5+ yrs vs ~3 (stretch). Pay not shown (high hike potential, estimate).",
+  "summary": "AI product engineering on Databricks' own AI features — Python services and LLM integration on the data+AI platform.",
+  "id": "databricks-sr-software-engineer-databric",
+  "found": "2026-11-14",
+  "latex": "\\documentclass[10pt]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[margin=0.6in]{geometry}\n\\usepackage[hidelinks]{hyperref}\n\\usepackage{enumitem,titlesec}\n\\pagestyle{empty}\n\\titleformat{\\section}{\\large\\scshape}{}{0em}{}[\\titlerule]\n\\titlespacing*{\\section}{0pt}{6pt}{3pt}\n\\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt}\n\\begin{document}\n\\noindent{\\LARGE\\bfseries Pradeep Konda}\\\\ \\textit{AI Engineer}\\\\ {\\small PHONE | EMAIL | LINKEDIN | GITHUB (fill in before sending)}\n\\section*{Summary}\nAI engineer (\\~{}3 yrs) building Python/FastAPI LLM backends with deterministic Pydantic contracts, LangChain agent orchestration, and CI/CD deployment on Azure (AKS/Helm, Databricks).\n\\section*{Skills Summary}\n\\begin{itemize}\n\\item \\textbf{LLM/AI:} LangChain, LangGraph, Agent Skills \\& Agentic Workflows, OpenAI/Anthropic APIs, Gemini, RAG, Prompt Engineering, JSON Schema, Pydantic\n\\item \\textbf{Languages:} Python, Java, TypeScript, JavaScript, C++, SQL, Dart\n\\item \\textbf{Frameworks:} FastAPI, Spring Boot, ReactJS, Kubernetes, Flutter\n\\item \\textbf{Tools:} Azure Databricks, Azure Functions, Helm, Git, Postman, OracleDB\n\\item \\textbf{DevOps/Testing:} CI/CD (Azure DevOps), Docker, Pytest, JUnit, Test Case Generation\n\\end{itemize}\n\\section*{Experience}\n\\noindent\\textbf{Technumen}\\hfill \\\\\n\\textit{AI Engineer}\\hfill Jul 2026 -- Present\n\\begin{itemize}\n\\item \\textbf{Google Internal Tools:} Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.\n\\item \\textbf{Agent Skills:} Developed several AI agent skills that update test cases and test them as they run.\n\\item \\textbf{Test Case Agents:} Built agents that write and test test cases for Google Workspace.\n\\end{itemize}\n\\noindent\\textbf{Shimento}\\hfill Hyderabad, India\\\\\n\\textit{Fullstack AI Engineer}\\hfill Nov 2025 -- Jun 2026\n\\begin{itemize}\n\\item \\textbf{Agentic AI Systems:} Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.\n\\item \\textbf{VS Code Extension:} Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.\n\\item \\textbf{Backend AI Services:} Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.\n\\item \\textbf{LLM Integrations:} Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.\n\\item \\textbf{System Design:} Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability.\n\\end{itemize}\n\\noindent\\textbf{UBS}\\hfill Pune, India\\\\\n\\textit{Software Engineer}\\hfill Aug 2023 -- Nov 2025\n\\begin{itemize}\n\\item \\textbf{LLM-Powered Code Analyzer:} Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.\n\\item \\textbf{Multi-Agent Workflows:} Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.\n\\item \\textbf{Context + Code Understanding:} Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.\n\\item \\textbf{RAG Pipelines:} Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.\n\\item \\textbf{Backend Integrations:} Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.\n\\item \\textbf{Optimization:} Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30\\%.\n\\item \\textbf{Deployment CI/CD:} Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps.\n\\end{itemize}\n\\section*{Projects}\n\\noindent\\textbf{Ariadne: On-Call Agent with Graph Memory}\\hfill Oct 2026\\\\\n\\textit{Graph Hacks (FalkorDB) | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Agent Design:} Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.\n\\item \\textbf{Measured Memory:} Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests.\n\\end{itemize}\n\\noindent\\textbf{AgriN: Digital Agriculture Advisory Network}\\hfill 2026\\\\\n\\textit{Personal Project}\n\\begin{itemize}\n\\item \\textbf{Deterministic Engine:} FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.\n\\item \\textbf{Pipeline and ML:} Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app.\n\\end{itemize}\n\\noindent\\textbf{Jal Panchayat: Village Water Safety Verdicts}\\hfill 2026\\\\\n\\textit{Code for a Billion | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Fail-Closed Engine:} Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.\n\\item \\textbf{Safe Narration:} Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31\\%.\n\\end{itemize}\n\\noindent\\textbf{RoadLedger: Road Defect Measurement}\\hfill 2026\\\\\n\\textit{OpenCV AI Competition 2026 | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Measured Evidence:} OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.\n\\item \\textbf{Live Capture:} Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders.\n\\end{itemize}\n\\section*{Education}\n\\noindent\\textbf{Army Institute of Technology}\\hfill Pune, India\\\\\n\\textit{B.E. in Computer Science and Engineering; CGPA: 8.87 / 10}\\hfill Aug 2019 -- Jun 2023\n\\section*{Certifications}\n\\begin{itemize}\n\\item \\textbf{PL-300:} Power BI Data Analyst Associate\n\\item \\textbf{AI-900:} Azure AI Fundamentals\n\\item \\textbf{AZ-900:} Azure Fundamentals\n\\item \\textbf{DP-900:} Azure Data Fundamentals\n\\end{itemize}\n\\end{document}",
+  "resume": {
+   "summary": "AI engineer (~3 yrs) building Python/FastAPI LLM backends with deterministic Pydantic contracts, LangChain agent orchestration, and CI/CD deployment on Azure (AKS/Helm, Databricks).",
+   "skills": [
+    {
+     "label": "LLM/AI",
+     "items": [
+      "LangChain",
+      "LangGraph",
+      "Agent Skills & Agentic Workflows",
+      "OpenAI/Anthropic APIs",
+      "Gemini",
+      "RAG",
+      "Prompt Engineering",
+      "JSON Schema",
+      "Pydantic"
+     ]
+    },
+    {
+     "label": "Languages",
+     "items": [
+      "Python",
+      "Java",
+      "TypeScript",
+      "JavaScript",
+      "C++",
+      "SQL",
+      "Dart"
+     ]
+    },
+    {
+     "label": "Frameworks",
+     "items": [
+      "FastAPI",
+      "Spring Boot",
+      "ReactJS",
+      "Kubernetes",
+      "Flutter"
+     ]
+    },
+    {
+     "label": "Tools",
+     "items": [
+      "Azure Databricks",
+      "Azure Functions",
+      "Helm",
+      "Git",
+      "Postman",
+      "OracleDB"
+     ]
+    },
+    {
+     "label": "DevOps/Testing",
+     "items": [
+      "CI/CD (Azure DevOps)",
+      "Docker",
+      "Pytest",
+      "JUnit",
+      "Test Case Generation"
+     ]
+    }
+   ],
+   "experience": [
+    {
+     "company": "Technumen",
+     "location": "",
+     "role": "AI Engineer",
+     "dates": "Jul 2026 – Present",
+     "bullets": [
+      "Google Internal Tools: Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.",
+      "Agent Skills: Developed several AI agent skills that update test cases and test them as they run.",
+      "Test Case Agents: Built agents that write and test test cases for Google Workspace."
+     ]
+    },
+    {
+     "company": "Shimento",
+     "location": "Hyderabad, India",
+     "role": "Fullstack AI Engineer",
+     "dates": "Nov 2025 – Jun 2026",
+     "bullets": [
+      "Agentic AI Systems: Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.",
+      "VS Code Extension: Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.",
+      "Backend AI Services: Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.",
+      "LLM Integrations: Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.",
+      "System Design: Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability."
+     ]
+    },
+    {
+     "company": "UBS",
+     "location": "Pune, India",
+     "role": "Software Engineer",
+     "dates": "Aug 2023 – Nov 2025",
+     "bullets": [
+      "LLM-Powered Code Analyzer: Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.",
+      "Multi-Agent Workflows: Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.",
+      "Context + Code Understanding: Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.",
+      "RAG Pipelines: Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.",
+      "Backend Integrations: Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.",
+      "Optimization: Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30%.",
+      "Deployment CI/CD: Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Ariadne: On-Call Agent with Graph Memory",
+     "sub": "Graph Hacks (FalkorDB) · Personal Project",
+     "dates": "Oct 2026",
+     "bullets": [
+      "Agent Design: Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.",
+      "Measured Memory: Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests."
+     ]
+    },
+    {
+     "name": "AgriN: Digital Agriculture Advisory Network",
+     "sub": "Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Deterministic Engine: FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.",
+      "Pipeline and ML: Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app."
+     ]
+    },
+    {
+     "name": "Jal Panchayat: Village Water Safety Verdicts",
+     "sub": "Code for a Billion · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Fail-Closed Engine: Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.",
+      "Safe Narration: Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31%."
+     ]
+    },
+    {
+     "name": "RoadLedger: Road Defect Measurement",
+     "sub": "OpenCV AI Competition 2026 · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Measured Evidence: OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.",
+      "Live Capture: Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders."
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "title": "Senior Forward Deployed Engineer",
+  "company": "Databricks",
+  "location": "Bengaluru, India",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8629999002",
+  "source": "Databricks (career site)",
+  "posted": "Greenhouse updated 2026-11-14 (0d)",
+  "score": 75,
+  "matched": "FDE is a target title; build-and-deploy-with-customers fits Pradeep's client-facing agentic work for Google (Technumen) and LLM developer tooling. Bengaluru; attach-friendly.",
+  "gaps": "\"Senior\" FDE likely wants 5+ yrs and strong data-platform/customer delivery depth (stretch at ~3 yrs). Pay not shown (estimate strong hike).",
+  "summary": "Forward-deployed engineering at Databricks: build, integrate and deploy data+AI solutions directly with customers.",
+  "id": "databricks-senior-forward-deployed-engin",
+  "found": "2026-11-14",
+  "latex": "\\documentclass[10pt]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[margin=0.6in]{geometry}\n\\usepackage[hidelinks]{hyperref}\n\\usepackage{enumitem,titlesec}\n\\pagestyle{empty}\n\\titleformat{\\section}{\\large\\scshape}{}{0em}{}[\\titlerule]\n\\titlespacing*{\\section}{0pt}{6pt}{3pt}\n\\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt}\n\\begin{document}\n\\noindent{\\LARGE\\bfseries Pradeep Konda}\\\\ \\textit{AI Engineer}\\\\ {\\small PHONE | EMAIL | LINKEDIN | GITHUB (fill in before sending)}\n\\section*{Summary}\nForward-deployed / AI engineer (\\~{}3 yrs) who builds and deploys LLM and agentic solutions with clients --- Google-client agentic projects, an LLM code analyzer exposed via FastAPI, and containerized delivery on Azure Kubernetes.\n\\section*{Skills Summary}\n\\begin{itemize}\n\\item \\textbf{LLM/AI:} Agent Skills \\& Agentic Workflows, LangChain, LangGraph, OpenAI/Anthropic APIs, Gemini, RAG, Prompt Engineering, JSON Schema, Pydantic\n\\item \\textbf{Languages:} Python, Java, TypeScript, JavaScript, C++, SQL, Dart\n\\item \\textbf{Frameworks:} FastAPI, Spring Boot, ReactJS, Kubernetes, Flutter\n\\item \\textbf{Tools:} Azure Databricks, Azure Functions, Helm, Git, Postman, OracleDB\n\\item \\textbf{DevOps/Testing:} CI/CD (Azure DevOps), Docker, Pytest, JUnit, Test Case Generation\n\\end{itemize}\n\\section*{Experience}\n\\noindent\\textbf{Technumen}\\hfill \\\\\n\\textit{AI Engineer}\\hfill Jul 2026 -- Present\n\\begin{itemize}\n\\item \\textbf{Google Internal Tools:} Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.\n\\item \\textbf{Agent Skills:} Developed several AI agent skills that update test cases and test them as they run.\n\\item \\textbf{Test Case Agents:} Built agents that write and test test cases for Google Workspace.\n\\end{itemize}\n\\noindent\\textbf{Shimento}\\hfill Hyderabad, India\\\\\n\\textit{Fullstack AI Engineer}\\hfill Nov 2025 -- Jun 2026\n\\begin{itemize}\n\\item \\textbf{Agentic AI Systems:} Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.\n\\item \\textbf{VS Code Extension:} Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.\n\\item \\textbf{Backend AI Services:} Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.\n\\item \\textbf{LLM Integrations:} Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.\n\\item \\textbf{System Design:} Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability.\n\\end{itemize}\n\\noindent\\textbf{UBS}\\hfill Pune, India\\\\\n\\textit{Software Engineer}\\hfill Aug 2023 -- Nov 2025\n\\begin{itemize}\n\\item \\textbf{LLM-Powered Code Analyzer:} Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.\n\\item \\textbf{Multi-Agent Workflows:} Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.\n\\item \\textbf{Context + Code Understanding:} Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.\n\\item \\textbf{RAG Pipelines:} Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.\n\\item \\textbf{Backend Integrations:} Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.\n\\item \\textbf{Optimization:} Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30\\%.\n\\item \\textbf{Deployment CI/CD:} Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps.\n\\end{itemize}\n\\section*{Projects}\n\\noindent\\textbf{Ariadne: On-Call Agent with Graph Memory}\\hfill Oct 2026\\\\\n\\textit{Graph Hacks (FalkorDB) | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Agent Design:} Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.\n\\item \\textbf{Measured Memory:} Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests.\n\\end{itemize}\n\\noindent\\textbf{AgriN: Digital Agriculture Advisory Network}\\hfill 2026\\\\\n\\textit{Personal Project}\n\\begin{itemize}\n\\item \\textbf{Deterministic Engine:} FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.\n\\item \\textbf{Pipeline and ML:} Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app.\n\\end{itemize}\n\\noindent\\textbf{Jal Panchayat: Village Water Safety Verdicts}\\hfill 2026\\\\\n\\textit{Code for a Billion | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Fail-Closed Engine:} Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.\n\\item \\textbf{Safe Narration:} Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31\\%.\n\\end{itemize}\n\\noindent\\textbf{RoadLedger: Road Defect Measurement}\\hfill 2026\\\\\n\\textit{OpenCV AI Competition 2026 | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Measured Evidence:} OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.\n\\item \\textbf{Live Capture:} Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders.\n\\end{itemize}\n\\section*{Education}\n\\noindent\\textbf{Army Institute of Technology}\\hfill Pune, India\\\\\n\\textit{B.E. in Computer Science and Engineering; CGPA: 8.87 / 10}\\hfill Aug 2019 -- Jun 2023\n\\section*{Certifications}\n\\begin{itemize}\n\\item \\textbf{PL-300:} Power BI Data Analyst Associate\n\\item \\textbf{AI-900:} Azure AI Fundamentals\n\\item \\textbf{AZ-900:} Azure Fundamentals\n\\item \\textbf{DP-900:} Azure Data Fundamentals\n\\end{itemize}\n\\end{document}",
+  "resume": {
+   "summary": "Forward-deployed / AI engineer (~3 yrs) who builds and deploys LLM and agentic solutions with clients — Google-client agentic projects, an LLM code analyzer exposed via FastAPI, and containerized delivery on Azure Kubernetes.",
+   "skills": [
+    {
+     "label": "LLM/AI",
+     "items": [
+      "Agent Skills & Agentic Workflows",
+      "LangChain",
+      "LangGraph",
+      "OpenAI/Anthropic APIs",
+      "Gemini",
+      "RAG",
+      "Prompt Engineering",
+      "JSON Schema",
+      "Pydantic"
+     ]
+    },
+    {
+     "label": "Languages",
+     "items": [
+      "Python",
+      "Java",
+      "TypeScript",
+      "JavaScript",
+      "C++",
+      "SQL",
+      "Dart"
+     ]
+    },
+    {
+     "label": "Frameworks",
+     "items": [
+      "FastAPI",
+      "Spring Boot",
+      "ReactJS",
+      "Kubernetes",
+      "Flutter"
+     ]
+    },
+    {
+     "label": "Tools",
+     "items": [
+      "Azure Databricks",
+      "Azure Functions",
+      "Helm",
+      "Git",
+      "Postman",
+      "OracleDB"
+     ]
+    },
+    {
+     "label": "DevOps/Testing",
+     "items": [
+      "CI/CD (Azure DevOps)",
+      "Docker",
+      "Pytest",
+      "JUnit",
+      "Test Case Generation"
+     ]
+    }
+   ],
+   "experience": [
+    {
+     "company": "Technumen",
+     "location": "",
+     "role": "AI Engineer",
+     "dates": "Jul 2026 – Present",
+     "bullets": [
+      "Google Internal Tools: Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.",
+      "Agent Skills: Developed several AI agent skills that update test cases and test them as they run.",
+      "Test Case Agents: Built agents that write and test test cases for Google Workspace."
+     ]
+    },
+    {
+     "company": "Shimento",
+     "location": "Hyderabad, India",
+     "role": "Fullstack AI Engineer",
+     "dates": "Nov 2025 – Jun 2026",
+     "bullets": [
+      "Agentic AI Systems: Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.",
+      "VS Code Extension: Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.",
+      "Backend AI Services: Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.",
+      "LLM Integrations: Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.",
+      "System Design: Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability."
+     ]
+    },
+    {
+     "company": "UBS",
+     "location": "Pune, India",
+     "role": "Software Engineer",
+     "dates": "Aug 2023 – Nov 2025",
+     "bullets": [
+      "LLM-Powered Code Analyzer: Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.",
+      "Multi-Agent Workflows: Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.",
+      "Context + Code Understanding: Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.",
+      "RAG Pipelines: Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.",
+      "Backend Integrations: Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.",
+      "Optimization: Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30%.",
+      "Deployment CI/CD: Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Ariadne: On-Call Agent with Graph Memory",
+     "sub": "Graph Hacks (FalkorDB) · Personal Project",
+     "dates": "Oct 2026",
+     "bullets": [
+      "Agent Design: Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.",
+      "Measured Memory: Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests."
+     ]
+    },
+    {
+     "name": "AgriN: Digital Agriculture Advisory Network",
+     "sub": "Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Deterministic Engine: FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.",
+      "Pipeline and ML: Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app."
+     ]
+    },
+    {
+     "name": "Jal Panchayat: Village Water Safety Verdicts",
+     "sub": "Code for a Billion · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Fail-Closed Engine: Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.",
+      "Safe Narration: Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31%."
+     ]
+    },
+    {
+     "name": "RoadLedger: Road Defect Measurement",
+     "sub": "OpenCV AI Competition 2026 · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Measured Evidence: OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.",
+      "Live Capture: Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders."
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "title": "Senior Software Engineer, Applied AI",
+  "company": "Toast",
+  "location": "Bangalore, India",
+  "url": "https://careers.toasttab.com/jobs?gh_jid=8345741",
+  "source": "Toast (career site)",
+  "posted": "Greenhouse updated 2026-11-12 (2d)",
+  "score": 74,
+  "matched": "Applied AI engineering at a US product company's Bangalore site; LLM feature build fits Pradeep's FastAPI/LLM and agentic experience. Bangalore full location; attach-friendly ATS.",
+  "gaps": "\"Senior\" likely 5+ yrs (stretch at ~3). Pay not shown (product company, estimate good hike).",
+  "summary": "Applied-AI engineering at Toast: build LLM-powered product features with Python services.",
+  "id": "toast-senior-software-engineer-applied-a",
+  "found": "2026-11-14",
+  "latex": "\\documentclass[10pt]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[margin=0.6in]{geometry}\n\\usepackage[hidelinks]{hyperref}\n\\usepackage{enumitem,titlesec}\n\\pagestyle{empty}\n\\titleformat{\\section}{\\large\\scshape}{}{0em}{}[\\titlerule]\n\\titlespacing*{\\section}{0pt}{6pt}{3pt}\n\\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt}\n\\begin{document}\n\\noindent{\\LARGE\\bfseries Pradeep Konda}\\\\ \\textit{AI Engineer}\\\\ {\\small PHONE | EMAIL | LINKEDIN | GITHUB (fill in before sending)}\n\\section*{Summary}\nApplied AI engineer (\\~{}3 yrs) building LLM-powered product features --- FastAPI services, LangChain agent orchestration, and deterministic Pydantic/JSON-schema outputs --- with Docker/Azure CI-CD delivery.\n\\section*{Skills Summary}\n\\begin{itemize}\n\\item \\textbf{LLM/AI:} LangChain, LangGraph, Agent Skills \\& Agentic Workflows, OpenAI/Anthropic APIs, Gemini, RAG, Prompt Engineering, JSON Schema, Pydantic\n\\item \\textbf{Languages:} Python, Java, TypeScript, JavaScript, C++, SQL, Dart\n\\item \\textbf{Frameworks:} FastAPI, Spring Boot, ReactJS, Kubernetes, Flutter\n\\item \\textbf{DevOps/Testing:} CI/CD (Azure DevOps), Docker, Pytest, JUnit, Test Case Generation\n\\item \\textbf{Tools:} Azure Databricks, Azure Functions, Helm, Git, Postman, OracleDB\n\\end{itemize}\n\\section*{Experience}\n\\noindent\\textbf{Technumen}\\hfill \\\\\n\\textit{AI Engineer}\\hfill Jul 2026 -- Present\n\\begin{itemize}\n\\item \\textbf{Google Internal Tools:} Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.\n\\item \\textbf{Agent Skills:} Developed several AI agent skills that update test cases and test them as they run.\n\\item \\textbf{Test Case Agents:} Built agents that write and test test cases for Google Workspace.\n\\end{itemize}\n\\noindent\\textbf{Shimento}\\hfill Hyderabad, India\\\\\n\\textit{Fullstack AI Engineer}\\hfill Nov 2025 -- Jun 2026\n\\begin{itemize}\n\\item \\textbf{Agentic AI Systems:} Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.\n\\item \\textbf{VS Code Extension:} Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.\n\\item \\textbf{Backend AI Services:} Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.\n\\item \\textbf{LLM Integrations:} Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.\n\\item \\textbf{System Design:} Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability.\n\\end{itemize}\n\\noindent\\textbf{UBS}\\hfill Pune, India\\\\\n\\textit{Software Engineer}\\hfill Aug 2023 -- Nov 2025\n\\begin{itemize}\n\\item \\textbf{LLM-Powered Code Analyzer:} Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.\n\\item \\textbf{Multi-Agent Workflows:} Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.\n\\item \\textbf{Context + Code Understanding:} Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.\n\\item \\textbf{RAG Pipelines:} Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.\n\\item \\textbf{Backend Integrations:} Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.\n\\item \\textbf{Optimization:} Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30\\%.\n\\item \\textbf{Deployment CI/CD:} Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps.\n\\end{itemize}\n\\section*{Projects}\n\\noindent\\textbf{Ariadne: On-Call Agent with Graph Memory}\\hfill Oct 2026\\\\\n\\textit{Graph Hacks (FalkorDB) | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Agent Design:} Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.\n\\item \\textbf{Measured Memory:} Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests.\n\\end{itemize}\n\\noindent\\textbf{AgriN: Digital Agriculture Advisory Network}\\hfill 2026\\\\\n\\textit{Personal Project}\n\\begin{itemize}\n\\item \\textbf{Deterministic Engine:} FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.\n\\item \\textbf{Pipeline and ML:} Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app.\n\\end{itemize}\n\\noindent\\textbf{Jal Panchayat: Village Water Safety Verdicts}\\hfill 2026\\\\\n\\textit{Code for a Billion | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Fail-Closed Engine:} Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.\n\\item \\textbf{Safe Narration:} Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31\\%.\n\\end{itemize}\n\\noindent\\textbf{RoadLedger: Road Defect Measurement}\\hfill 2026\\\\\n\\textit{OpenCV AI Competition 2026 | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Measured Evidence:} OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.\n\\item \\textbf{Live Capture:} Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders.\n\\end{itemize}\n\\section*{Education}\n\\noindent\\textbf{Army Institute of Technology}\\hfill Pune, India\\\\\n\\textit{B.E. in Computer Science and Engineering; CGPA: 8.87 / 10}\\hfill Aug 2019 -- Jun 2023\n\\section*{Certifications}\n\\begin{itemize}\n\\item \\textbf{PL-300:} Power BI Data Analyst Associate\n\\item \\textbf{AI-900:} Azure AI Fundamentals\n\\item \\textbf{AZ-900:} Azure Fundamentals\n\\item \\textbf{DP-900:} Azure Data Fundamentals\n\\end{itemize}\n\\end{document}",
+  "resume": {
+   "summary": "Applied AI engineer (~3 yrs) building LLM-powered product features — FastAPI services, LangChain agent orchestration, and deterministic Pydantic/JSON-schema outputs — with Docker/Azure CI-CD delivery.",
+   "skills": [
+    {
+     "label": "LLM/AI",
+     "items": [
+      "LangChain",
+      "LangGraph",
+      "Agent Skills & Agentic Workflows",
+      "OpenAI/Anthropic APIs",
+      "Gemini",
+      "RAG",
+      "Prompt Engineering",
+      "JSON Schema",
+      "Pydantic"
+     ]
+    },
+    {
+     "label": "Languages",
+     "items": [
+      "Python",
+      "Java",
+      "TypeScript",
+      "JavaScript",
+      "C++",
+      "SQL",
+      "Dart"
+     ]
+    },
+    {
+     "label": "Frameworks",
+     "items": [
+      "FastAPI",
+      "Spring Boot",
+      "ReactJS",
+      "Kubernetes",
+      "Flutter"
+     ]
+    },
+    {
+     "label": "DevOps/Testing",
+     "items": [
+      "CI/CD (Azure DevOps)",
+      "Docker",
+      "Pytest",
+      "JUnit",
+      "Test Case Generation"
+     ]
+    },
+    {
+     "label": "Tools",
+     "items": [
+      "Azure Databricks",
+      "Azure Functions",
+      "Helm",
+      "Git",
+      "Postman",
+      "OracleDB"
+     ]
+    }
+   ],
+   "experience": [
+    {
+     "company": "Technumen",
+     "location": "",
+     "role": "AI Engineer",
+     "dates": "Jul 2026 – Present",
+     "bullets": [
+      "Google Internal Tools: Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.",
+      "Agent Skills: Developed several AI agent skills that update test cases and test them as they run.",
+      "Test Case Agents: Built agents that write and test test cases for Google Workspace."
+     ]
+    },
+    {
+     "company": "Shimento",
+     "location": "Hyderabad, India",
+     "role": "Fullstack AI Engineer",
+     "dates": "Nov 2025 – Jun 2026",
+     "bullets": [
+      "Agentic AI Systems: Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.",
+      "VS Code Extension: Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.",
+      "Backend AI Services: Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.",
+      "LLM Integrations: Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.",
+      "System Design: Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability."
+     ]
+    },
+    {
+     "company": "UBS",
+     "location": "Pune, India",
+     "role": "Software Engineer",
+     "dates": "Aug 2023 – Nov 2025",
+     "bullets": [
+      "LLM-Powered Code Analyzer: Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.",
+      "Multi-Agent Workflows: Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.",
+      "Context + Code Understanding: Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.",
+      "RAG Pipelines: Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.",
+      "Backend Integrations: Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.",
+      "Optimization: Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30%.",
+      "Deployment CI/CD: Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Ariadne: On-Call Agent with Graph Memory",
+     "sub": "Graph Hacks (FalkorDB) · Personal Project",
+     "dates": "Oct 2026",
+     "bullets": [
+      "Agent Design: Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.",
+      "Measured Memory: Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests."
+     ]
+    },
+    {
+     "name": "AgriN: Digital Agriculture Advisory Network",
+     "sub": "Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Deterministic Engine: FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.",
+      "Pipeline and ML: Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app."
+     ]
+    },
+    {
+     "name": "Jal Panchayat: Village Water Safety Verdicts",
+     "sub": "Code for a Billion · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Fail-Closed Engine: Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.",
+      "Safe Narration: Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31%."
+     ]
+    },
+    {
+     "name": "RoadLedger: Road Defect Measurement",
+     "sub": "OpenCV AI Competition 2026 · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Measured Evidence: OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.",
+      "Live Capture: Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders."
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "title": "Sr. Software Engineer, AI Trust and Innovation",
+  "company": "Amazon",
+  "location": "Bengaluru, India",
+  "url": "https://www.amazon.jobs/en/jobs/10596568",
+  "source": "Amazon (career site)",
+  "posted": "2026-11-10 (4d)",
+  "score": 73,
+  "matched": "AI-focused SWE at Amazon Bengaluru; LLM/AI systems and backend scale fit Pradeep's FastAPI/LLM and AKS deployment experience. Full location; attach-friendly company ATS.",
+  "gaps": "\"Sr\" band likely 5-8 yrs (stretch at ~3). Amazon bar-raiser process is demanding. Pay not shown (Amazon L5/L6 Blr well above 35 LPA, estimate).",
+  "summary": "AI Trust & Innovation engineering at Amazon: build LLM/AI systems and backend services at scale.",
+  "id": "amazon-sr-software-engineer-ai-trust-and",
+  "found": "2026-11-14",
+  "latex": "\\documentclass[10pt]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[margin=0.6in]{geometry}\n\\usepackage[hidelinks]{hyperref}\n\\usepackage{enumitem,titlesec}\n\\pagestyle{empty}\n\\titleformat{\\section}{\\large\\scshape}{}{0em}{}[\\titlerule]\n\\titlespacing*{\\section}{0pt}{6pt}{3pt}\n\\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt}\n\\begin{document}\n\\noindent{\\LARGE\\bfseries Pradeep Konda}\\\\ \\textit{AI Engineer}\\\\ {\\small PHONE | EMAIL | LINKEDIN | GITHUB (fill in before sending)}\n\\section*{Summary}\nAI engineer (\\~{}3 yrs) building LLM systems and scalable Python/Java backends --- an LLM code analyzer, RAG pipelines, and FastAPI/Spring Boot services deployed on Azure Kubernetes with CI/CD.\n\\section*{Skills Summary}\n\\begin{itemize}\n\\item \\textbf{LLM/AI:} OpenAI/Anthropic APIs, LangChain, LangGraph, Agent Skills \\& Agentic Workflows, Gemini, RAG, Prompt Engineering, JSON Schema, Pydantic\n\\item \\textbf{Languages:} Python, Java, C++, TypeScript, JavaScript, SQL, Dart\n\\item \\textbf{Frameworks:} FastAPI, Spring Boot, ReactJS, Kubernetes, Flutter\n\\item \\textbf{DevOps/Testing:} CI/CD (Azure DevOps), Docker, Pytest, JUnit, Test Case Generation\n\\item \\textbf{Tools:} Azure Databricks, Azure Functions, Helm, Git, Postman, OracleDB\n\\end{itemize}\n\\section*{Experience}\n\\noindent\\textbf{Technumen}\\hfill \\\\\n\\textit{AI Engineer}\\hfill Jul 2026 -- Present\n\\begin{itemize}\n\\item \\textbf{Google Internal Tools:} Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.\n\\item \\textbf{Agent Skills:} Developed several AI agent skills that update test cases and test them as they run.\n\\item \\textbf{Test Case Agents:} Built agents that write and test test cases for Google Workspace.\n\\end{itemize}\n\\noindent\\textbf{Shimento}\\hfill Hyderabad, India\\\\\n\\textit{Fullstack AI Engineer}\\hfill Nov 2025 -- Jun 2026\n\\begin{itemize}\n\\item \\textbf{Agentic AI Systems:} Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.\n\\item \\textbf{VS Code Extension:} Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.\n\\item \\textbf{Backend AI Services:} Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.\n\\item \\textbf{LLM Integrations:} Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.\n\\item \\textbf{System Design:} Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability.\n\\end{itemize}\n\\noindent\\textbf{UBS}\\hfill Pune, India\\\\\n\\textit{Software Engineer}\\hfill Aug 2023 -- Nov 2025\n\\begin{itemize}\n\\item \\textbf{LLM-Powered Code Analyzer:} Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.\n\\item \\textbf{Multi-Agent Workflows:} Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.\n\\item \\textbf{Context + Code Understanding:} Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.\n\\item \\textbf{RAG Pipelines:} Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.\n\\item \\textbf{Backend Integrations:} Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.\n\\item \\textbf{Optimization:} Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30\\%.\n\\item \\textbf{Deployment CI/CD:} Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps.\n\\end{itemize}\n\\section*{Projects}\n\\noindent\\textbf{Ariadne: On-Call Agent with Graph Memory}\\hfill Oct 2026\\\\\n\\textit{Graph Hacks (FalkorDB) | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Agent Design:} Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.\n\\item \\textbf{Measured Memory:} Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests.\n\\end{itemize}\n\\noindent\\textbf{AgriN: Digital Agriculture Advisory Network}\\hfill 2026\\\\\n\\textit{Personal Project}\n\\begin{itemize}\n\\item \\textbf{Deterministic Engine:} FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.\n\\item \\textbf{Pipeline and ML:} Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app.\n\\end{itemize}\n\\noindent\\textbf{Jal Panchayat: Village Water Safety Verdicts}\\hfill 2026\\\\\n\\textit{Code for a Billion | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Fail-Closed Engine:} Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.\n\\item \\textbf{Safe Narration:} Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31\\%.\n\\end{itemize}\n\\noindent\\textbf{RoadLedger: Road Defect Measurement}\\hfill 2026\\\\\n\\textit{OpenCV AI Competition 2026 | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Measured Evidence:} OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.\n\\item \\textbf{Live Capture:} Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders.\n\\end{itemize}\n\\section*{Education}\n\\noindent\\textbf{Army Institute of Technology}\\hfill Pune, India\\\\\n\\textit{B.E. in Computer Science and Engineering; CGPA: 8.87 / 10}\\hfill Aug 2019 -- Jun 2023\n\\section*{Certifications}\n\\begin{itemize}\n\\item \\textbf{PL-300:} Power BI Data Analyst Associate\n\\item \\textbf{AI-900:} Azure AI Fundamentals\n\\item \\textbf{AZ-900:} Azure Fundamentals\n\\item \\textbf{DP-900:} Azure Data Fundamentals\n\\end{itemize}\n\\end{document}",
+  "resume": {
+   "summary": "AI engineer (~3 yrs) building LLM systems and scalable Python/Java backends — an LLM code analyzer, RAG pipelines, and FastAPI/Spring Boot services deployed on Azure Kubernetes with CI/CD.",
+   "skills": [
+    {
+     "label": "LLM/AI",
+     "items": [
+      "OpenAI/Anthropic APIs",
+      "LangChain",
+      "LangGraph",
+      "Agent Skills & Agentic Workflows",
+      "Gemini",
+      "RAG",
+      "Prompt Engineering",
+      "JSON Schema",
+      "Pydantic"
+     ]
+    },
+    {
+     "label": "Languages",
+     "items": [
+      "Python",
+      "Java",
+      "C++",
+      "TypeScript",
+      "JavaScript",
+      "SQL",
+      "Dart"
+     ]
+    },
+    {
+     "label": "Frameworks",
+     "items": [
+      "FastAPI",
+      "Spring Boot",
+      "ReactJS",
+      "Kubernetes",
+      "Flutter"
+     ]
+    },
+    {
+     "label": "DevOps/Testing",
+     "items": [
+      "CI/CD (Azure DevOps)",
+      "Docker",
+      "Pytest",
+      "JUnit",
+      "Test Case Generation"
+     ]
+    },
+    {
+     "label": "Tools",
+     "items": [
+      "Azure Databricks",
+      "Azure Functions",
+      "Helm",
+      "Git",
+      "Postman",
+      "OracleDB"
+     ]
+    }
+   ],
+   "experience": [
+    {
+     "company": "Technumen",
+     "location": "",
+     "role": "AI Engineer",
+     "dates": "Jul 2026 – Present",
+     "bullets": [
+      "Google Internal Tools: Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.",
+      "Agent Skills: Developed several AI agent skills that update test cases and test them as they run.",
+      "Test Case Agents: Built agents that write and test test cases for Google Workspace."
+     ]
+    },
+    {
+     "company": "Shimento",
+     "location": "Hyderabad, India",
+     "role": "Fullstack AI Engineer",
+     "dates": "Nov 2025 – Jun 2026",
+     "bullets": [
+      "Agentic AI Systems: Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.",
+      "VS Code Extension: Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.",
+      "Backend AI Services: Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.",
+      "LLM Integrations: Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.",
+      "System Design: Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability."
+     ]
+    },
+    {
+     "company": "UBS",
+     "location": "Pune, India",
+     "role": "Software Engineer",
+     "dates": "Aug 2023 – Nov 2025",
+     "bullets": [
+      "LLM-Powered Code Analyzer: Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.",
+      "Multi-Agent Workflows: Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.",
+      "Context + Code Understanding: Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.",
+      "RAG Pipelines: Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.",
+      "Backend Integrations: Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.",
+      "Optimization: Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30%.",
+      "Deployment CI/CD: Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Ariadne: On-Call Agent with Graph Memory",
+     "sub": "Graph Hacks (FalkorDB) · Personal Project",
+     "dates": "Oct 2026",
+     "bullets": [
+      "Agent Design: Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.",
+      "Measured Memory: Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests."
+     ]
+    },
+    {
+     "name": "AgriN: Digital Agriculture Advisory Network",
+     "sub": "Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Deterministic Engine: FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.",
+      "Pipeline and ML: Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app."
+     ]
+    },
+    {
+     "name": "Jal Panchayat: Village Water Safety Verdicts",
+     "sub": "Code for a Billion · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Fail-Closed Engine: Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.",
+      "Safe Narration: Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31%."
+     ]
+    },
+    {
+     "name": "RoadLedger: Road Defect Measurement",
+     "sub": "OpenCV AI Competition 2026 · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Measured Evidence: OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.",
+      "Live Capture: Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders."
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "title": "Sr Software Development Engineer, FAI-Asset Creation Tech",
+  "company": "Amazon",
+  "location": "Hyderabad, India",
+  "url": "https://www.amazon.jobs/en/jobs/10602293",
+  "source": "Amazon (career site)",
+  "posted": "2026-11-11 (3d)",
+  "score": 71,
+  "matched": "AI/asset-creation SWE at Amazon Hyderabad; Python/backend + AI systems fit Pradeep's profile; Hyderabad is his home city (full location). Attach-friendly company ATS.",
+  "gaps": "\"Sr SDE\" likely 5+ yrs (stretch at ~3). Role leans toward large-scale systems; Pradeep's scale is startup-level (flag). Pay not shown (estimate strong hike).",
+  "summary": "Senior SDE on Amazon's FAI Asset Creation Tech: build AI-driven asset-generation systems in Python/Java at scale.",
+  "id": "amazon-sr-software-development-engineer-",
+  "found": "2026-11-14",
+  "latex": "\\documentclass[10pt]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[margin=0.6in]{geometry}\n\\usepackage[hidelinks]{hyperref}\n\\usepackage{enumitem,titlesec}\n\\pagestyle{empty}\n\\titleformat{\\section}{\\large\\scshape}{}{0em}{}[\\titlerule]\n\\titlespacing*{\\section}{0pt}{6pt}{3pt}\n\\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt}\n\\begin{document}\n\\noindent{\\LARGE\\bfseries Pradeep Konda}\\\\ \\textit{AI Engineer}\\\\ {\\small PHONE | EMAIL | LINKEDIN | GITHUB (fill in before sending)}\n\\section*{Summary}\nSoftware/AI engineer (\\~{}3 yrs) building Python and Java backend services with LLM integration --- FastAPI + Pydantic contracts, RAG pipelines, and Azure Kubernetes CI/CD delivery.\n\\section*{Skills Summary}\n\\begin{itemize}\n\\item \\textbf{Languages:} Python, Java, C++, TypeScript, JavaScript, SQL, Dart\n\\item \\textbf{LLM/AI:} OpenAI/Anthropic APIs, LangChain, LangGraph, Agent Skills \\& Agentic Workflows, Gemini, RAG, Prompt Engineering, JSON Schema, Pydantic\n\\item \\textbf{Frameworks:} FastAPI, Spring Boot, ReactJS, Kubernetes, Flutter\n\\item \\textbf{DevOps/Testing:} CI/CD (Azure DevOps), Docker, Pytest, JUnit, Test Case Generation\n\\item \\textbf{Tools:} Azure Databricks, Azure Functions, Helm, Git, Postman, OracleDB\n\\end{itemize}\n\\section*{Experience}\n\\noindent\\textbf{Technumen}\\hfill \\\\\n\\textit{AI Engineer}\\hfill Jul 2026 -- Present\n\\begin{itemize}\n\\item \\textbf{Google Internal Tools:} Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.\n\\item \\textbf{Agent Skills:} Developed several AI agent skills that update test cases and test them as they run.\n\\item \\textbf{Test Case Agents:} Built agents that write and test test cases for Google Workspace.\n\\end{itemize}\n\\noindent\\textbf{Shimento}\\hfill Hyderabad, India\\\\\n\\textit{Fullstack AI Engineer}\\hfill Nov 2025 -- Jun 2026\n\\begin{itemize}\n\\item \\textbf{Agentic AI Systems:} Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.\n\\item \\textbf{VS Code Extension:} Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.\n\\item \\textbf{Backend AI Services:} Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.\n\\item \\textbf{LLM Integrations:} Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.\n\\item \\textbf{System Design:} Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability.\n\\end{itemize}\n\\noindent\\textbf{UBS}\\hfill Pune, India\\\\\n\\textit{Software Engineer}\\hfill Aug 2023 -- Nov 2025\n\\begin{itemize}\n\\item \\textbf{LLM-Powered Code Analyzer:} Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.\n\\item \\textbf{Multi-Agent Workflows:} Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.\n\\item \\textbf{Context + Code Understanding:} Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.\n\\item \\textbf{RAG Pipelines:} Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.\n\\item \\textbf{Backend Integrations:} Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.\n\\item \\textbf{Optimization:} Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30\\%.\n\\item \\textbf{Deployment CI/CD:} Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps.\n\\end{itemize}\n\\section*{Projects}\n\\noindent\\textbf{Ariadne: On-Call Agent with Graph Memory}\\hfill Oct 2026\\\\\n\\textit{Graph Hacks (FalkorDB) | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Agent Design:} Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.\n\\item \\textbf{Measured Memory:} Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests.\n\\end{itemize}\n\\noindent\\textbf{AgriN: Digital Agriculture Advisory Network}\\hfill 2026\\\\\n\\textit{Personal Project}\n\\begin{itemize}\n\\item \\textbf{Deterministic Engine:} FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.\n\\item \\textbf{Pipeline and ML:} Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app.\n\\end{itemize}\n\\noindent\\textbf{Jal Panchayat: Village Water Safety Verdicts}\\hfill 2026\\\\\n\\textit{Code for a Billion | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Fail-Closed Engine:} Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.\n\\item \\textbf{Safe Narration:} Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31\\%.\n\\end{itemize}\n\\noindent\\textbf{RoadLedger: Road Defect Measurement}\\hfill 2026\\\\\n\\textit{OpenCV AI Competition 2026 | Personal Project}\n\\begin{itemize}\n\\item \\textbf{Measured Evidence:} OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.\n\\item \\textbf{Live Capture:} Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders.\n\\end{itemize}\n\\section*{Education}\n\\noindent\\textbf{Army Institute of Technology}\\hfill Pune, India\\\\\n\\textit{B.E. in Computer Science and Engineering; CGPA: 8.87 / 10}\\hfill Aug 2019 -- Jun 2023\n\\section*{Certifications}\n\\begin{itemize}\n\\item \\textbf{PL-300:} Power BI Data Analyst Associate\n\\item \\textbf{AI-900:} Azure AI Fundamentals\n\\item \\textbf{AZ-900:} Azure Fundamentals\n\\item \\textbf{DP-900:} Azure Data Fundamentals\n\\end{itemize}\n\\end{document}",
+  "resume": {
+   "summary": "Software/AI engineer (~3 yrs) building Python and Java backend services with LLM integration — FastAPI + Pydantic contracts, RAG pipelines, and Azure Kubernetes CI/CD delivery.",
+   "skills": [
+    {
+     "label": "Languages",
+     "items": [
+      "Python",
+      "Java",
+      "C++",
+      "TypeScript",
+      "JavaScript",
+      "SQL",
+      "Dart"
+     ]
+    },
+    {
+     "label": "LLM/AI",
+     "items": [
+      "OpenAI/Anthropic APIs",
+      "LangChain",
+      "LangGraph",
+      "Agent Skills & Agentic Workflows",
+      "Gemini",
+      "RAG",
+      "Prompt Engineering",
+      "JSON Schema",
+      "Pydantic"
+     ]
+    },
+    {
+     "label": "Frameworks",
+     "items": [
+      "FastAPI",
+      "Spring Boot",
+      "ReactJS",
+      "Kubernetes",
+      "Flutter"
+     ]
+    },
+    {
+     "label": "DevOps/Testing",
+     "items": [
+      "CI/CD (Azure DevOps)",
+      "Docker",
+      "Pytest",
+      "JUnit",
+      "Test Case Generation"
+     ]
+    },
+    {
+     "label": "Tools",
+     "items": [
+      "Azure Databricks",
+      "Azure Functions",
+      "Helm",
+      "Git",
+      "Postman",
+      "OracleDB"
+     ]
+    }
+   ],
+   "experience": [
+    {
+     "company": "Technumen",
+     "location": "",
+     "role": "AI Engineer",
+     "dates": "Jul 2026 – Present",
+     "bullets": [
+      "Google Internal Tools: Worked on several agentic AI projects with Google as the client, using Google's internal tools including Gemini and Jetski.",
+      "Agent Skills: Developed several AI agent skills that update test cases and test them as they run.",
+      "Test Case Agents: Built agents that write and test test cases for Google Workspace."
+     ]
+    },
+    {
+     "company": "Shimento",
+     "location": "Hyderabad, India",
+     "role": "Fullstack AI Engineer",
+     "dates": "Nov 2025 – Jun 2026",
+     "bullets": [
+      "Agentic AI Systems: Designed and implemented agent-based workflows using LangChain and LangGraph for complex reasoning, validation, and tool orchestration.",
+      "VS Code Extension: Developed a VS Code extension using TypeScript to provide AI-assisted code understanding, context-aware actions, and seamless backend integration.",
+      "Backend AI Services: Built scalable Python backend services using FastAPI to handle LangChain-based computation, agent execution, and structured LLM outputs.",
+      "LLM Integrations: Integrated OpenAI/AzureOpenAI models with deterministic JSON schema validation using Pydantic to ensure reliable and reproducible AI responses.",
+      "System Design: Designed end-to-end fullstack architecture connecting editor extensions, AI agents, and backend services with robust error handling and observability."
+     ]
+    },
+    {
+     "company": "UBS",
+     "location": "Pune, India",
+     "role": "Software Engineer",
+     "dates": "Aug 2023 – Nov 2025",
+     "bullets": [
+      "LLM-Powered Code Analyzer: Developed a Python application using GPT-4 API to analyze and summarize large code repositories. Built deterministic JSON I/O contracts using Pydantic, and exposed via FastAPI service.",
+      "Multi-Agent Workflows: Experimented with LangChain-based pipelines to orchestrate tool calling and validation for developer-facing automation tasks.",
+      "Context + Code Understanding: Integrated AST parsing and static analysis into LLM workflows to improve accuracy of code recommendations.",
+      "RAG Pipelines: Prototyped retrieval-augmented generation (RAG) with embeddings for knowledge grounding in internal tools.",
+      "Backend Integrations: Designed REST APIs for financial systems using Spring Boot and FastAPI; ensured robust error handling and logging.",
+      "Optimization: Improved service performance via caching, query optimization, and asynchronous processing; reduced latency by 30%.",
+      "Deployment CI/CD: Containerized services with Docker, deployed on Azure Kubernetes Service (AKS) using Helm, and integrated automated pipelines with Azure DevOps."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Ariadne: On-Call Agent with Graph Memory",
+     "sub": "Graph Hacks (FalkorDB) · Personal Project",
+     "dates": "Oct 2026",
+     "bullets": [
+      "Agent Design: Built an on-call agent over a FalkorDB graph with nine graph tools; Cypher and graph algorithms rank the suspect commit while the LLM only chooses tools and explains, so the verdict is unchanged without the model.",
+      "Measured Memory: Resolved incidents are written back as reusable plans; across 20 alerts per arm the warm path took four tool calls and reached the same culprit as cold on all 20. Shipped an MCP server, Alertmanager webhook, hosted demo and 168 tests."
+     ]
+    },
+    {
+     "name": "AgriN: Digital Agriculture Advisory Network",
+     "sub": "Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Deterministic Engine: FAO-56 evapotranspiration, soil and paddy water balance, nutrients and crop rotation are computed by code; the LLM only narrates, and a guard rejects any figure that is not in the engine output.",
+      "Pipeline and ML: Ingests weather, soil and Sentinel satellite data on a schedule; shipped an on-device rice disease model (10 classes, 0.981 accuracy on answered photos) with cloud fallback, spend caps and an offline-first mobile app."
+     ]
+    },
+    {
+     "name": "Jal Panchayat: Village Water Safety Verdicts",
+     "sub": "Code for a Billion · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Fail-Closed Engine: Deterministic IS 10500 verdict engine over 16 water-quality parameters that reports untested water as unknown, never safe; 19 property tests.",
+      "Safe Narration: Narration guard blocks invented figures and the boiling myth; reply rendering runs with no model. Public data shows 72,606 contaminated samples with remedial action recorded for 31%."
+     ]
+    },
+    {
+     "name": "RoadLedger: Road Defect Measurement",
+     "sub": "OpenCV AI Competition 2026 · Personal Project",
+     "dates": "2026",
+     "bullets": [
+      "Measured Evidence: OpenCV pipeline that rectifies the road plane and measures each defect's area in square metres, scores agreement across views and asks a person when they disagree; 41 invariant tests.",
+      "Live Capture: Phone-mounted capture mode and a review UI deployed on AWS CloudFront, producing prioritised, costed repair work orders."
+     ]
+    }
+   ]
+  }
  }
 ]
