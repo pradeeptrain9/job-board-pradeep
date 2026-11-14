@@ -150,6 +150,10 @@ pre{border-radius:14px;background:color-mix(in srgb,var(--bg),transparent 25%)}
 <script>
 const STATUSES=["New","Approved to apply","Applied","Skip"];
 let jobs=[],filter="All",cityFilter="All",attachOnly=false;const canWrite=true;let LS={};try{LS=JSON.parse(localStorage.getItem("st")||"{}")}catch{}
+// Jobs and their status live in a database (Cloudflare D1) behind this API; if it is unreachable the page falls back to jobs.json + this browser.
+const JOBS_API="https://jobboard-api.anchal-tailor-9346.workers.dev",BOARD="pradeep";let apiOk=false;
+const saveLocal=()=>{try{localStorage.setItem("st",JSON.stringify(LS))}catch{}};
+function saveSt(id,v){LS[id]=v;if(!apiOk){saveLocal();return}fetch(JOBS_API+"/api/jobs/"+BOARD+"/"+encodeURIComponent(id),{method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify({status:v})}).then(r=>{if(!r.ok)throw 0}).catch(saveLocal)}
 const CITIES=["Hyderabad","Bengaluru","Remote"];
 // Attach-friendly = you can upload the tailored resume per application (Wellfound, LinkedIn, company ATS). Naukri/Indeed/Foundit quick-apply use your profile resume instead.
 const attachFriendly=j=>!/naukri|indeed|foundit|shine/i.test(j.source||"");
@@ -235,9 +239,9 @@ function render(){
     const sel=el("select");sel.setAttribute("aria-label","Status for "+j.title);
     STATUSES.forEach(s=>{const o=el("option",null,s);o.value=s;if(s===st)o.selected=true;sel.append(o)});
     sel.disabled=!canWrite;
-    sel.onchange=()=>{LS[j.id]=sel.value;try{localStorage.setItem("st",JSON.stringify(LS))}catch{}render()};
+    sel.onchange=()=>{saveSt(j.id,sel.value);render()};
     // Opening the posting or downloading the tailored resume counts as applying — mark it, in place.
-    const applyNow=()=>{if((LS[j.id]||"New")==="Applied")return;LS[j.id]="Applied";try{localStorage.setItem("st",JSON.stringify(LS))}catch{}sel.value="Applied";li.className="job st-Applied"};
+    const applyNow=()=>{if((LS[j.id]||"New")==="Applied")return;saveSt(j.id,"Applied");sel.value="Applied";li.className="job st-Applied"};
     a.addEventListener("click",applyNow);
     // Apply: one click readies the application — downloads the tailored PDF and opens the posting. You review and submit on the site; it is never auto-submitted.
     const ap=el("button","apply-btn",j.resume?"Apply (resume + open)":"Apply (open)");ap.type="button";
@@ -353,5 +357,7 @@ $("#tailor").onsubmit=async e=>{
   msg.textContent="Done. Download below.";
 };
 render();
-fetch("jobs.json").then(r=>r.json()).then(d=>{jobs=d;render()}).catch(()=>$("#list").replaceChildren(el("li","empty","Could not load jobs.")));
+const fromFile=()=>fetch("jobs.json").then(r=>r.json()).then(d=>{jobs=d;render()}).catch(()=>$("#list").replaceChildren(el("li","empty","Could not load jobs.")));
+const load=()=>fetch(JOBS_API+"/api/jobs?board="+BOARD).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{if(!d.length)throw 0;jobs=d;LS={};d.forEach(j=>{if(j.status)LS[j.id]=j.status});apiOk=true;render()}).catch(()=>{if(!jobs.length)return fromFile()});
+load();document.addEventListener("visibilitychange",()=>{if(!document.hidden&&apiOk)load()});
 </script></body></html>
