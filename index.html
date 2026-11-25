@@ -369,4 +369,6 @@ render();
 const fromFile=()=>fetch("jobs.json").then(r=>r.json()).then(d=>{jobs=d;render()}).catch(()=>$("#list").replaceChildren(el("li","empty","Could not load jobs.")));
 const load=()=>fetch(JOBS_API+"/api/jobs?board="+BOARD).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{if(!d.length)throw 0;jobs=d;LS={};d.forEach(j=>{if(j.status)LS[j.id]=j.status});apiOk=true;render()}).catch(()=>{if(!jobs.length)return fromFile()});
 load();document.addEventListener("visibilitychange",()=>{if(!document.hidden&&apiOk)load()});
-</script></body></html>
+</script>
+<script>window.CHAT={who:"Pradeep",api:"https://anchal-tailor.anchal-tailor-9346.workers.dev",fixed:{exp:"3 years",cur:"22 LPA",exp_ctc:"35 LPA or higher (open to discussion)",loc:null,edu:"B.E. in Computer Science and Engineering, Army Institute of Technology, Pune (2019-2023)"},extra:"Candidate: Pradeep Konda, AI Engineer, about 3 years."};</script>
+<script src="chat.js"></script></body></html>
