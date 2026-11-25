@@ -59,7 +59,12 @@ aBtn.onclick=async()=>{
   ext.push({title:clean(title||"Job from link").slice(0,120),company:clean(aCo.value.trim()).slice(0,80),url,jd:clean(jd).slice(0,3000)});
   try{localStorage.setItem("extjobs",JSON.stringify(ext))}catch{}
   fillSel();sel.value="e"+(ext.length-1);sel.onchange();aUrl.value=aTitle.value=aCo.value=aJd.value="";aMsg.textContent="";
-  say("bot","Added “"+ext[ext.length-1].title+"”. Ask your questions for it now.")};
+  const x=ext[ext.length-1];let pub="";
+  try{const d=typeof scoreDet==="function"?scoreDet(x.jd||x.title):{};
+    const r=await fetch(JOBS_API+"/api/jobs/"+BOARD,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({title:x.title,company:x.company,url:x.url,summary:x.jd.slice(0,600),score:d.score,matched:d.matched})});
+    if(!r.ok)throw 0;const o=await r.json();jobs.push(o.job);if(typeof render==="function")render();pub=" It is also on the public board now (status New).";}
+  catch{pub=" (Could not add it to the public board, kept in this browser only.)"}
+  say("bot","Added “"+x.title+"”."+pub+" Ask your questions for it now.")};
 ["Current CTC?","Expected CTC?","Notice period?","Total experience?",...OPEN].forEach(t=>{const b=el("button","copy",t.replace(/\?$/,""));b.type="button";b.onclick=()=>ask(t);chips.append(b)});
 
 const say=(who,t)=>{const m=el("div");m.style.cssText="padding:8px 10px;border-radius:12px;white-space:pre-wrap;"+(who==="me"?"background:color-mix(in srgb,var(--accent),transparent 85%);justify-self:end;max-width:85%":"background:var(--bg);border:1px solid var(--line);max-width:92%");
